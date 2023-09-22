@@ -5278,11 +5278,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+      "projectPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\obj\\",
+      "outputPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\APT01-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5297,11 +5297,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
+            "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
             },
-            "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
-              "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj"
+            "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
+              "projectPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj"
             }
           }
         }

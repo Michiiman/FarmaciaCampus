@@ -6550,11 +6550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "projectUniqueName": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
       "projectName": "ApiFarmacia",
-      "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "projectPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
       "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\obj\\",
+      "outputPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\APT01-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6569,8 +6569,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj": {
-              "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj"
+            "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj"
             }
           }
         }

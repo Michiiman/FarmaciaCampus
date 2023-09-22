@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WadT+UPSxVyEdBw+IXEAiTr10r4P4T9frarIssm+aqaMB5g4Jys/W7E5HtoJmbAr+E1+F3Sdrrr4ajE2U2c7/w==",
+  "dgSpecHash": "/X+ih4qOZWmDGx1nfGT1t1zbcNLasmRf/255GkNe/GpiihmcjWUmxbh0l12aB1XRoVdu74ZgL81gbYwp5Zy2oA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\APT01-36\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\APT01-36\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
