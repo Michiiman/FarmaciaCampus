@@ -15,9 +15,6 @@ public class Persona : BaseEntity
     public ICollection<Medicamento> Medicamentos { get; set; }
     public ICollection<Receta> Recetas { get; set; }
     public ICollection<FacturaVenta> FacturasVentas { get; set; }
-
-    public ICollection<Receta>Doctor{ get; set; }
-    public ICollection<Receta>Paciente{ get; set; }
-    
+    public User User{ get; set; }
 
 }
