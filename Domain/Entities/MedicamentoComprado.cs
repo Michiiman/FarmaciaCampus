@@ -10,8 +10,6 @@ public class MedicamentoComprado : BaseEntity
     public Medicamento Medicamento { get; set; }
     public int CantidadComprada { get; set; }
     public int PrecioCompra { get; set; }
-    public ICollection<Compra> Compras { get; set; }
-
-
+    
 
 }

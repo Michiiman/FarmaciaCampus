@@ -19,11 +19,13 @@ namespace Persistence;
             public DbSet<Receta> Recetas { get; set; }
             public DbSet<MedicamentoComprado> MedicamentosComprados { get; set; }
             public DbSet<FacturaVenta> FacturasVentas { get; set; }
+            public DbSet<FacturaVenta> PacientesVentas{ get; set; }
+            public DbSet<FacturaVenta> EmpleadosVentas{ get; set; }
             public DbSet<MedicamentoReceta> MedicamentosRecetas { get; set; }
             public DbSet<MedicamentoVendido> MedicamentoVendidos { get; set; }
-            public DbSet<Receta>Doctor{ get; set; }
-            public DbSet<Receta>Paciente{ get; set; }
-            
+            public DbSet<Receta>Doctores{ get; set; }
+            public DbSet<Receta>Pacientes{ get; set; }
+        
             //JWT
             public DbSet<User> Users { get; set; }
             public DbSet<Rol> Rols { get; set; }

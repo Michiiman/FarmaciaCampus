@@ -29,40 +29,14 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("date")
                         .HasColumnName("FechaCompra");
 
-                    b.Property<int?>("MedicamentoCompradoId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ProveedorIdFk")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MedicamentoCompradoId");
-
                     b.HasIndex("ProveedorIdFk");
 
                     b.ToTable("compra", (string)null);
-                });
-
-            modelBuilder.Entity("Domain.Entities.Doctor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Especialidad")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Doctor", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.FacturaVenta", b =>
@@ -78,9 +52,6 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("date")
                         .HasColumnName("FechaFactura");
 
-                    b.Property<int?>("PErsonaId")
-                        .HasColumnType("int");
-
                     b.Property<int>("PacienteIdFk")
                         .HasColumnType("int");
 
@@ -95,7 +66,7 @@ namespace Persistence.Data.Migrations
 
                     b.HasIndex("EmpleadoIdFk");
 
-                    b.HasIndex("PErsonaId");
+                    b.HasIndex("PacienteIdFk");
 
                     b.HasIndex("RecetaIdFk")
                         .IsUnique();
@@ -423,10 +394,6 @@ namespace Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.Compra", b =>
                 {
-                    b.HasOne("Domain.Entities.MedicamentoComprado", null)
-                        .WithMany("Compras")
-                        .HasForeignKey("MedicamentoCompradoId");
-
                     b.HasOne("Domain.Entities.Persona", "Persona")
                         .WithMany("Compras")
                         .HasForeignKey("ProveedorIdFk")
@@ -438,15 +405,17 @@ namespace Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.FacturaVenta", b =>
                 {
-                    b.HasOne("Domain.Entities.Persona", "Persona")
-                        .WithMany("FacturasVentas")
+                    b.HasOne("Domain.Entities.Persona", "Empleado")
+                        .WithMany("EmpleadosVentas")
                         .HasForeignKey("EmpleadoIdFk")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Persona", "PErsona")
-                        .WithMany()
-                        .HasForeignKey("PErsonaId");
+                    b.HasOne("Domain.Entities.Persona", "Paciente")
+                        .WithMany("PacientesVentas")
+                        .HasForeignKey("PacienteIdFk")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Entities.Receta", "Receta")
                         .WithOne("FacturaVenta")
@@ -454,9 +423,9 @@ namespace Persistence.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("PErsona");
+                    b.Navigation("Empleado");
 
-                    b.Navigation("Persona");
+                    b.Navigation("Paciente");
 
                     b.Navigation("Receta");
                 });
@@ -550,14 +519,14 @@ namespace Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.Receta", b =>
                 {
-                    b.HasOne("Domain.Entities.Doctor", "Doctor")
-                        .WithMany("Recetas")
+                    b.HasOne("Domain.Entities.Persona", "Doctor")
+                        .WithMany("Doctores")
                         .HasForeignKey("DoctorIdFk")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.Persona", "Paciente")
-                        .WithMany("Recetas")
+                        .WithMany("Pacientes")
                         .HasForeignKey("PacienteIdFk")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -613,11 +582,6 @@ namespace Persistence.Data.Migrations
                     b.Navigation("MedicamentosComprados");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Doctor", b =>
-                {
-                    b.Navigation("Recetas");
-                });
-
             modelBuilder.Entity("Domain.Entities.FacturaVenta", b =>
                 {
                     b.Navigation("MedicamentosVendidos");
@@ -632,20 +596,19 @@ namespace Persistence.Data.Migrations
                     b.Navigation("MedicamentosVendidos");
                 });
 
-            modelBuilder.Entity("Domain.Entities.MedicamentoComprado", b =>
-                {
-                    b.Navigation("Compras");
-                });
-
             modelBuilder.Entity("Domain.Entities.Persona", b =>
                 {
                     b.Navigation("Compras");
 
-                    b.Navigation("FacturasVentas");
+                    b.Navigation("Doctores");
+
+                    b.Navigation("EmpleadosVentas");
 
                     b.Navigation("Medicamentos");
 
-                    b.Navigation("Recetas");
+                    b.Navigation("Pacientes");
+
+                    b.Navigation("PacientesVentas");
 
                     b.Navigation("Telefonos");
 

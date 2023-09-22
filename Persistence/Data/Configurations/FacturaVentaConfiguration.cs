@@ -25,12 +25,12 @@ namespace Persistencia.Data.Configuration
             .HasColumnType("int")
             .IsRequired();
 
-            builder.HasOne(p => p.Persona)
-            .WithMany(p => p.FacturasVentas)
+            builder.HasOne(p => p.Paciente)
+            .WithMany(p => p.PacientesVentas)
             .HasForeignKey(p => p.PacienteIdFk);
 
-            builder.HasOne(p => p.Persona)
-            .WithMany(p => p.FacturasVentas)
+            builder.HasOne(p => p.Empleado)
+            .WithMany(p => p.EmpleadosVentas)
             .HasForeignKey(p => p.EmpleadoIdFk);
 
             builder.HasOne(p => p.Receta)

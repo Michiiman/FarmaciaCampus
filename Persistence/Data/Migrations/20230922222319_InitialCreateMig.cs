@@ -16,23 +16,6 @@ namespace Persistence.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Doctor",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nombre = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Especialidad = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Doctor", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "rol",
                 columns: table => new
                 {
@@ -109,6 +92,27 @@ namespace Persistence.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "compra",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    FechaCompra = table.Column<DateTime>(type: "date", nullable: false),
+                    ProveedorIdFk = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_compra", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_compra_Persona_ProveedorIdFk",
+                        column: x => x.ProveedorIdFk,
+                        principalTable: "Persona",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Medicamento",
                 columns: table => new
                 {
@@ -151,9 +155,9 @@ namespace Persistence.Data.Migrations
                 {
                     table.PrimaryKey("PK_Receta", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Receta_Doctor_DoctorIdFk",
+                        name: "FK_Receta_Persona_DoctorIdFk",
                         column: x => x.DoctorIdFk,
-                        principalTable: "Doctor",
+                        principalTable: "Persona",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -216,6 +220,35 @@ namespace Persistence.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "MedicamentoComprado",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CompraIdFk = table.Column<int>(type: "int", nullable: false),
+                    MedicamentoIdFk = table.Column<int>(type: "int", nullable: false),
+                    CantidadComprada = table.Column<int>(type: "int", nullable: false),
+                    PrecioCompra = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MedicamentoComprado", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MedicamentoComprado_Medicamento_MedicamentoIdFk",
+                        column: x => x.MedicamentoIdFk,
+                        principalTable: "Medicamento",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MedicamentoComprado_compra_CompraIdFk",
+                        column: x => x.CompraIdFk,
+                        principalTable: "compra",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "FacturaVenta",
                 columns: table => new
                 {
@@ -224,7 +257,6 @@ namespace Persistence.Data.Migrations
                     FechaFactura = table.Column<DateTime>(type: "date", nullable: false),
                     PacienteIdFk = table.Column<int>(type: "int", nullable: false),
                     EmpleadoIdFk = table.Column<int>(type: "int", nullable: false),
-                    PErsonaId = table.Column<int>(type: "int", nullable: true),
                     RecetaIdFk = table.Column<int>(type: "int", nullable: false),
                     PrecioTotal = table.Column<int>(type: "int", nullable: false)
                 },
@@ -238,10 +270,11 @@ namespace Persistence.Data.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_FacturaVenta_Persona_PErsonaId",
-                        column: x => x.PErsonaId,
+                        name: "FK_FacturaVenta_Persona_PacienteIdFk",
+                        column: x => x.PacienteIdFk,
                         principalTable: "Persona",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_FacturaVenta_Receta_RecetaIdFk",
                         column: x => x.RecetaIdFk,
@@ -334,62 +367,6 @@ namespace Persistence.Data.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
-            migrationBuilder.CreateTable(
-                name: "compra",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FechaCompra = table.Column<DateTime>(type: "date", nullable: false),
-                    ProveedorIdFk = table.Column<int>(type: "int", nullable: false),
-                    MedicamentoCompradoId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_compra", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_compra_Persona_ProveedorIdFk",
-                        column: x => x.ProveedorIdFk,
-                        principalTable: "Persona",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "MedicamentoComprado",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    CompraIdFk = table.Column<int>(type: "int", nullable: false),
-                    MedicamentoIdFk = table.Column<int>(type: "int", nullable: false),
-                    CantidadComprada = table.Column<int>(type: "int", nullable: false),
-                    PrecioCompra = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MedicamentoComprado", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_MedicamentoComprado_Medicamento_MedicamentoIdFk",
-                        column: x => x.MedicamentoIdFk,
-                        principalTable: "Medicamento",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_MedicamentoComprado_compra_CompraIdFk",
-                        column: x => x.CompraIdFk,
-                        principalTable: "compra",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_compra_MedicamentoCompradoId",
-                table: "compra",
-                column: "MedicamentoCompradoId");
-
             migrationBuilder.CreateIndex(
                 name: "IX_compra_ProveedorIdFk",
                 table: "compra",
@@ -401,9 +378,9 @@ namespace Persistence.Data.Migrations
                 column: "EmpleadoIdFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FacturaVenta_PErsonaId",
+                name: "IX_FacturaVenta_PacienteIdFk",
                 table: "FacturaVenta",
-                column: "PErsonaId");
+                column: "PacienteIdFk");
 
             migrationBuilder.CreateIndex(
                 name: "IX_FacturaVenta_RecetaIdFk",
@@ -481,21 +458,13 @@ namespace Persistence.Data.Migrations
                 name: "IX_userRol_RolIdFk",
                 table: "userRol",
                 column: "RolIdFk");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_compra_MedicamentoComprado_MedicamentoCompradoId",
-                table: "compra",
-                column: "MedicamentoCompradoId",
-                principalTable: "MedicamentoComprado",
-                principalColumn: "Id");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_compra_MedicamentoComprado_MedicamentoCompradoId",
-                table: "compra");
+            migrationBuilder.DropTable(
+                name: "MedicamentoComprado");
 
             migrationBuilder.DropTable(
                 name: "MedicamentosReceta");
@@ -510,7 +479,13 @@ namespace Persistence.Data.Migrations
                 name: "userRol");
 
             migrationBuilder.DropTable(
+                name: "compra");
+
+            migrationBuilder.DropTable(
                 name: "FacturaVenta");
+
+            migrationBuilder.DropTable(
+                name: "Medicamento");
 
             migrationBuilder.DropTable(
                 name: "rol");
@@ -520,18 +495,6 @@ namespace Persistence.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Receta");
-
-            migrationBuilder.DropTable(
-                name: "Doctor");
-
-            migrationBuilder.DropTable(
-                name: "MedicamentoComprado");
-
-            migrationBuilder.DropTable(
-                name: "Medicamento");
-
-            migrationBuilder.DropTable(
-                name: "compra");
 
             migrationBuilder.DropTable(
                 name: "Persona");
