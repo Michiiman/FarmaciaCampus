@@ -28,7 +28,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         context = _context;
     }
 
-    public ICompra Compras
+    public ICompra Compras //Como se define en la IUnitOfWork
     {
         get
         {
