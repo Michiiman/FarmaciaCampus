@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NoFhU522JJrDT/86zvyDxIhqjmN3Ho9yqWiI5lNxFuVHWKOuTBP5d/siiia/NE7ZT+Am50UtSZbfeRpuhAmSHA==",
+  "dgSpecHash": "85t2vNkthCEzh5ND1YRbe92h9WmLZarTn4FQHrnmpbGYeYpdVPmgKQlQSAoxdMbBf2SdLh0WdQVUAI6Qj8Sz2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+  "projectFilePath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\APT01-36\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\APT01-36\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",

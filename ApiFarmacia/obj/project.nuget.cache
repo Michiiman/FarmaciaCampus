@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "41pzUYTKIZezhXEHsMezrUyETZ5EnydJbSSUJ/kCF7T9oYRCoojSMa/Xje7Im3vV6KkBl1i2+tVjQ6pLvcAtBg==",
+  "dgSpecHash": "DzHJVuh/O/rnJzi5fzNXstTFQzRazvFTd3GtnMCTtOgvxK4kH4hSIfWcdSM1QR8Vk1mY7XitdV8uDH/furNNMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+  "projectFilePath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\APT01-36\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\APT01-36\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

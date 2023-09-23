@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {}
+    "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
     "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
+    "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+        "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\obj\\",
+        "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APT01-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
