@@ -12,8 +12,9 @@ var logger = new LoggerConfiguration()
 					.Enrich.FromLogContext()
 					.CreateLogger();
 
+builder.Logging.AddSerilog(logger);
 // Add services to the container.
-
+builder.Services.AddAplicacionServices();
 builder.Services.AddControllers();
 builder.Services.ConfigureRateLimiting();
 builder.Services.ConfigureApiVersioning();
@@ -39,6 +40,23 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+	var services = scope.ServiceProvider;
+	var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+	try
+	{
+		var context = services.GetRequiredService<FarmaciaContext>();
+		await context.Database.MigrateAsync();
+		//await FarmaciaContextSeed.SeedRolesAsync(context,loggerFactory);
+		await FarmaciaContextSeed.SeedAsync(context,loggerFactory);
+	}
+	catch (Exception ex)
+	{
+		var _logger = loggerFactory.CreateLogger<Program>();
+		_logger.LogError(ex, "Ocurrio un error durante la migracion");
+	}
+}
 
 app.UseHttpsRedirection();
 

@@ -16,14 +16,34 @@ public class FarmaciaContextSeed
 
             if (!context.Personas.Any())
             {
-                using (var readerPersonas = new StreamReader(ruta + @"/Data/Csv/Persona.csv"))
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/Persona.csv"))
                 {
-                    using (var csv = new CsvReader(readerPersonas, CultureInfo.InvariantCulture))
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
                     {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
                         var list = csv.GetRecords<Persona>();
-                        context.Personas.AddRange(list);
+                        List<Persona> entidad = new List<Persona>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Persona
+                            {
+                                Id = item.Id,
+                                Nombre = item.Nombre,
+                                NumeroDocumento = item.NumeroDocumento,
+                                TipoPersonaIdFk = item.TipoPersonaIdFk,
+                                TipoDeDocumentoIdFk = item.TipoDeDocumentoIdFk,
+                                Direccion=item.Direccion
+                            });
+                        }
+
+                        context.Personas.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
+
                 }
             }if (!context.TiposPersonas.Any())
             {
