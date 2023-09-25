@@ -6,7 +6,7 @@ using Persistence;
 
 namespace Application.Repository;
 
-     public class RolRepository : GenericRepository<Rol> , IRol
+    public class RolRepository : GenericRepository<Rol> , IRol
     {
         protected readonly FarmaciaContext _context;
         

@@ -11,7 +11,7 @@ using Persistence;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(FarmaciaContext))]
-    [Migration("20230922222319_InitialCreateMig")]
+    [Migration("20230925020421_InitialCreateMig")]
     partial class InitialCreateMig
     {
         /// <inheritdoc />
@@ -217,6 +217,9 @@ namespace Persistence.Data.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("varchar")
                         .HasColumnName("Nombre");
+
+                    b.Property<string>("NumeroDocumento")
+                        .HasColumnType("longtext");
 
                     b.Property<int>("TipoDeDocumentoIdFk")
                         .HasColumnType("int");

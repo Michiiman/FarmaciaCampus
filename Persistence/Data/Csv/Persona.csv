@@ -1,0 +1,3 @@
+Id,Nombre,TipoDeDocumentoIdFk,NumeroDocumento,direccion,TipoPersonaIdFk
+1,Juan Robayo,1,1098783303,cra 8# 35-53 Alfonso Lopez,1
+2,Wiston Leon,1,12345678,cra 12 # 45-78 Provenza,1

@@ -6,8 +6,8 @@ using Persistence;
 
 namespace Application.Repository;
 
-    public class TipoDocumentoRepository : GenericRepository<TipoDocumento>,ITipoDocumento
-    {
+public class TipoDocumentoRepository : GenericRepository<TipoDocumento>, ITipoDocumento
+{
     protected readonly FarmaciaContext _context;
 
     public TipoDocumentoRepository(FarmaciaContext context) : base(context)
@@ -25,5 +25,5 @@ namespace Application.Repository;
     {
         return await _context.TiposDocumentos
         .FirstOrDefaultAsync(p => p.Id == id);
-    }      
     }
+}

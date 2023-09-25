@@ -69,6 +69,8 @@ namespace Persistence.Data.Migrations
                     Nombre = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     TipoDeDocumentoIdFk = table.Column<int>(type: "int", nullable: false),
+                    NumeroDocumento = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Direccion = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     TipoPersonaIdFk = table.Column<int>(type: "int", nullable: false)

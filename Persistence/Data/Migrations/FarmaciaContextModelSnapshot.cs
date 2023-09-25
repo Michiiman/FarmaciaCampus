@@ -215,6 +215,9 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("varchar")
                         .HasColumnName("Nombre");
 
+                    b.Property<string>("NumeroDocumento")
+                        .HasColumnType("longtext");
+
                     b.Property<int>("TipoDeDocumentoIdFk")
                         .HasColumnType("int");
 
