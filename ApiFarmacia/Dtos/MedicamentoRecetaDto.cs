@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Entities;
 
-namespace ApiFarmacia.Dtos
+namespace ApiFarmacia.Dtos;
+public class MedicamentoRecetaDto
 {
-    public class MedicamentoRecetaDto
-    {
-        
-    }
+    public int Id { get; set;}
+    public RecetaDto Receta { get; set; }
+    public int DoctorIdFk { get; set; }
 }
