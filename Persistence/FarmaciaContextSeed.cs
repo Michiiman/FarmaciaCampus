@@ -14,7 +14,40 @@ public class FarmaciaContextSeed
         {
             var ruta = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-           if (!context.TiposPersonas.Any())
+            if (!context.Medicamentos.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/Medicamento.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Medicamento>();
+                        List<Medicamento> entidad = new List<Medicamento>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Medicamento
+                            {
+                                Id = item.Id,
+                                Nombre = item.Nombre,
+                                Precio = item.Precio,
+                                Stock = item.Stock,
+                                FechaExpiracion = item.FechaExpiracion,
+                                TipoMedicamento = item.TipoMedicamento,
+                                ProveedorIdFk = item.ProveedorIdFk
+                            });
+                        }
+
+                        context.Medicamentos.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+
+                }
+            }
+            if (!context.TiposPersonas.Any())
             {
                 using (var readerTipoPersonas = new StreamReader(ruta + @"/Data/Csv/TipoPersona.csv"))
                 {
@@ -25,7 +58,8 @@ public class FarmaciaContextSeed
                         await context.SaveChangesAsync();
                     }
                 }
-            }if (!context.TiposDocumentos.Any())
+            }
+            if (!context.TiposDocumentos.Any())
             {
                 using (var readerTipoDocumento = new StreamReader(ruta + @"/Data/Csv/TipoDocumento.csv"))
                 {
@@ -36,7 +70,8 @@ public class FarmaciaContextSeed
                         await context.SaveChangesAsync();
                     }
                 }
-            } if (!context.Personas.Any())
+            }
+            if (!context.Personas.Any())
             {
                 using (var reader = new StreamReader(ruta + @"\Data\Csv/Persona.csv"))
                 {
@@ -58,7 +93,7 @@ public class FarmaciaContextSeed
                                 NumeroDocumento = item.NumeroDocumento,
                                 TipoPersonaIdFk = item.TipoPersonaIdFk,
                                 TipoDocumentoIdFk = item.TipoDocumentoIdFk,
-                                Direccion=item.Direccion
+                                Direccion = item.Direccion
                             });
                         }
 

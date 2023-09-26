@@ -7,8 +7,5 @@ public class MedicamentoDto
     public int Stock { get; set; }
     public DateTime FechaExpiracion { get; set; }
     public string TipoMedicamento { get; set; }
-    public int ProveedorId { get; set; }
-    public MedicamentoVendidoDto MedicamentosVendidos { get; set; }
-    public MedicamentoCompradoDto MedicamentosComprados { get; set; }
-    public MedicamentoRecetaDto MedicamentosRecetas { get; set; }
+    public int ProveedorIdFk { get; set; }
 }

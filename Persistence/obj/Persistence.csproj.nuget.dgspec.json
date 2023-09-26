@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj": {}
+    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj": {
+    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\obj\\",
+        "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -71,17 +71,17 @@
         }
       }
     },
-    "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
+    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\obj\\",
+        "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -93,8 +93,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj"
+              "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj"
               }
             }
           }
