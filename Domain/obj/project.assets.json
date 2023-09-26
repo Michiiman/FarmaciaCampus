@@ -5045,19 +5045,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\APT01-36\\.nuget\\packages\\": {}
+    "C:\\Users\\APT01-38\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj",
+      "projectUniqueName": "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\obj\\",
+      "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\APT01-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
