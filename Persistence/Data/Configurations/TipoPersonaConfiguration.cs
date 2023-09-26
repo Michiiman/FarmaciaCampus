@@ -15,7 +15,7 @@ namespace Persistencia.Data.Configuration
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
 
-            builder.Property(e => e.TipoDePersona)
+            builder.Property(e => e.Nombre)
             .HasColumnName("tipoPersona")
             .HasColumnType("varchar")
             .HasMaxLength(20)

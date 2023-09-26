@@ -68,7 +68,7 @@ namespace Persistence.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nombre = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    TipoDeDocumentoIdFk = table.Column<int>(type: "int", nullable: false),
+                    TipoDocumentoIdFk = table.Column<int>(type: "int", nullable: false),
                     NumeroDocumento = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Direccion = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
@@ -85,8 +85,8 @@ namespace Persistence.Data.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Persona_tipoDocumento_TipoDeDocumentoIdFk",
-                        column: x => x.TipoDeDocumentoIdFk,
+                        name: "FK_Persona_tipoDocumento_TipoDocumentoIdFk",
+                        column: x => x.TipoDocumentoIdFk,
                         principalTable: "tipoDocumento",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -426,9 +426,9 @@ namespace Persistence.Data.Migrations
                 column: "MedicamentoIdFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Persona_TipoDeDocumentoIdFk",
+                name: "IX_Persona_TipoDocumentoIdFk",
                 table: "Persona",
-                column: "TipoDeDocumentoIdFk");
+                column: "TipoDocumentoIdFk");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Persona_TipoPersonaIdFk",

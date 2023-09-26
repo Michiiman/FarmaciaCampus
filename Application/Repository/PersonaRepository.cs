@@ -20,7 +20,7 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
     {
         return await _context.Personas
         .Include(p => p.TipoPersona)
-        .Include(p => p.TipoDeDocumento)
+        .Include(p => p.TipoDocumento)
         .ToListAsync();
     }
 
@@ -28,7 +28,7 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
     {
         return await _context.Personas
         .Include(p => p.TipoPersona)
-        .Include(p => p.TipoDeDocumento)
+        .Include(p => p.TipoDocumento)
         .FirstOrDefaultAsync(p => p.Id == id);
     }
 }

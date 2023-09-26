@@ -14,38 +14,7 @@ public class FarmaciaContextSeed
         {
             var ruta = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            if (!context.Personas.Any())
-            {
-                using (var reader = new StreamReader(ruta + @"\Data\Csv/Persona.csv"))
-                {
-                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
-                    {
-                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
-                        MissingFieldFound = null
-                    }))
-                    {
-                        // Resto de tu código para leer y procesar el archivo CSV
-                        var list = csv.GetRecords<Persona>();
-                        List<Persona> entidad = new List<Persona>();
-                        foreach (var item in list)
-                        {
-                            entidad.Add(new Persona
-                            {
-                                Id = item.Id,
-                                Nombre = item.Nombre,
-                                NumeroDocumento = item.NumeroDocumento,
-                                TipoPersonaIdFk = item.TipoPersonaIdFk,
-                                TipoDeDocumentoIdFk = item.TipoDeDocumentoIdFk,
-                                Direccion=item.Direccion
-                            });
-                        }
-
-                        context.Personas.AddRange(entidad);
-                        await context.SaveChangesAsync();
-                    }
-
-                }
-            }if (!context.TiposPersonas.Any())
+           if (!context.TiposPersonas.Any())
             {
                 using (var readerTipoPersonas = new StreamReader(ruta + @"/Data/Csv/TipoPersona.csv"))
                 {
@@ -66,6 +35,37 @@ public class FarmaciaContextSeed
                         context.TiposDocumentos.AddRange(list);
                         await context.SaveChangesAsync();
                     }
+                }
+            } if (!context.Personas.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/Persona.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Persona>();
+                        List<Persona> entidad = new List<Persona>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Persona
+                            {
+                                Id = item.Id,
+                                Nombre = item.Nombre,
+                                NumeroDocumento = item.NumeroDocumento,
+                                TipoPersonaIdFk = item.TipoPersonaIdFk,
+                                TipoDocumentoIdFk = item.TipoDocumentoIdFk,
+                                Direccion=item.Direccion
+                            });
+                        }
+
+                        context.Personas.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+
                 }
             }
         }

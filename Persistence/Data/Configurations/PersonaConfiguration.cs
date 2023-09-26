@@ -27,9 +27,9 @@ namespace Persistencia.Data.Configuration
             .HasMaxLength(100)
             .IsRequired();
 
-            builder.HasOne(p => p.TipoDeDocumento)
+            builder.HasOne(p => p.TipoDocumento)
             .WithMany(p => p.Personas)
-            .HasForeignKey(p => p.TipoDeDocumentoIdFk);
+            .HasForeignKey(p => p.TipoDocumentoIdFk);
 
             builder.HasOne(p => p.TipoPersona)
             .WithMany(p => p.Personas)

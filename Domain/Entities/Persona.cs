@@ -5,8 +5,8 @@ namespace Domain.Entities;
 public class Persona : BaseEntity
 {
     public string Nombre { get; set; }
-    public int TipoDeDocumentoIdFk { get; set; }
-    public TipoDocumento TipoDeDocumento { get; set; }
+    public int TipoDocumentoIdFk { get; set; }
+    public TipoDocumento TipoDocumento { get; set; }
     public string NumeroDocumento {get;set;}
     public string Direccion { get; set; }
     public int TipoPersonaIdFk { get; set; }

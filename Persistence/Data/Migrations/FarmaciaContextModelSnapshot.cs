@@ -218,7 +218,7 @@ namespace Persistence.Data.Migrations
                     b.Property<string>("NumeroDocumento")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("TipoDeDocumentoIdFk")
+                    b.Property<int>("TipoDocumentoIdFk")
                         .HasColumnType("int");
 
                     b.Property<int>("TipoPersonaIdFk")
@@ -226,7 +226,7 @@ namespace Persistence.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TipoDeDocumentoIdFk");
+                    b.HasIndex("TipoDocumentoIdFk");
 
                     b.HasIndex("TipoPersonaIdFk");
 
@@ -333,7 +333,7 @@ namespace Persistence.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("TipoDePersona")
+                    b.Property<string>("Nombre")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("varchar")
@@ -503,9 +503,9 @@ namespace Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.Persona", b =>
                 {
-                    b.HasOne("Domain.Entities.TipoDocumento", "TipoDeDocumento")
+                    b.HasOne("Domain.Entities.TipoDocumento", "TipoDocumento")
                         .WithMany("Personas")
-                        .HasForeignKey("TipoDeDocumentoIdFk")
+                        .HasForeignKey("TipoDocumentoIdFk")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -515,7 +515,7 @@ namespace Persistence.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("TipoDeDocumento");
+                    b.Navigation("TipoDocumento");
 
                     b.Navigation("TipoPersona");
                 });
