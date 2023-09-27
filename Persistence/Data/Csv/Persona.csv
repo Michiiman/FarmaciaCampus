@@ -1,3 +1,11 @@
 Id,Nombre,TipoDocumentoIdFk,NumeroDocumento,Direccion,TipoPersonaIdFk
 1,Juan Robayo,1,1098783303,cra 8# 35-53 Alfonso Lopez,1
-2,Wiston Leon,1,12345678,cra 12 # 45-78 Provenza,1
+2,Wiston Leon,1,12345678,cra 12 # 45-78 Provenza,4
+3,Maria Perez,2,3123456789,cra 10 # 20-30 El Poblado,3
+4,Pedro Gonzalez,1,789456123,cra 20 # 30-40 Laureles,2
+5,Sofia Hernandez,2,567894321,cra 30 # 40-50 Envigado,3
+6,Carlos Ramirez,1,987654321,cra 40 # 50-60 Sabaneta,4
+7,Laura Londoño,2,456789321,cra 50 # 60-70 Itagüí,3
+8,Juan David,1,876543219,cra 60 # 70-80 Bello,5
+9,Sandra Gomez,2,765432198,cra 70 # 80-90 Copacabana,3
+10,Andres Sanchez,1,654321987,cra 80 # 90-100 Girardota,2

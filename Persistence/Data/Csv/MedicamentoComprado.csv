@@ -1,0 +1,6 @@
+Id,CompraIdFk,MedicamentoFk,CantidadComprada,PrecioCompra
+1,1,10,150,100
+2,2,9,150,10
+3,3,8,150,50
+4,4,7,150,15
+

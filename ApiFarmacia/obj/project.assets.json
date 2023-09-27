@@ -6619,19 +6619,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\APT01-38\\.nuget\\packages\\": {}
+    "C:\\Users\\dalgr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "projectUniqueName": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
       "projectName": "ApiFarmacia",
-      "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
-      "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\ApiFarmacia\\obj\\",
+      "projectPath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
+      "outputPath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\ApiFarmacia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -6643,8 +6643,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Application\\Application.csproj"
+            "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Application\\Application.csproj": {
+              "projectPath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Application\\Application.csproj"
             }
           }
         }

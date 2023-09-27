@@ -102,7 +102,69 @@ public class FarmaciaContextSeed
 
                 }
             }
-            if (!context.Recetas.Any())
+            if (!context.Compras.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/Compra.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Compra>();
+                        List<Compra> entidad = new List<Compra>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Compra
+                            {
+                                Id = item.Id,
+                                FechaCompra = item.FechaCompra,
+                                ProveedorIdFk = item.ProveedorIdFk
+                                
+                            });
+                        }
+
+                        context.Compras.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+
+                }
+            }
+            if (!context.MedicamentosComprados.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/MedicamentoComprado.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<MedicamentoComprado>();
+                        List<MedicamentoComprado> entidad = new List<MedicamentoComprado>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new MedicamentoComprado
+                            {
+                                Id = item.Id,
+                                CompraIdFk = item.CompraIdFk,
+                                MedicamentoIdFk = item.MedicamentoIdFk,
+                                CantidadComprada = item.CantidadComprada,
+                                PrecioCompra = item.PrecioCompra
+                                
+                            });
+                        }
+
+                        context.MedicamentosComprados.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+
+                }
+            }
+            /*if (!context.Recetas.Any())
             {
                 using (var reader = new StreamReader(ruta + @"\Data\Csv/Receta.csv"))
                 {
@@ -132,7 +194,7 @@ public class FarmaciaContextSeed
                     }
 
                 }
-            }
+            }*/
         }
 
         catch (Exception ex)
