@@ -17,7 +17,9 @@ public class CompraRepository : GenericRepository<Compra>, ICompra
     public override async Task<IEnumerable<Compra>> GetAllAsync()
     {
         return await _context.Compras
-        .Include(p => p.Persona)
+        .Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
+        .Include(p => p.Persona).ThenInclude(p => p.TipoDocumento)
+        .Include(p => p.MedicamentosComprados)
         .ToListAsync();
     }
 
@@ -27,4 +29,5 @@ public class CompraRepository : GenericRepository<Compra>, ICompra
         .Include(p => p.Persona)
         .FirstOrDefaultAsync(p => p.Id == id);
     }
+
 }

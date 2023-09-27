@@ -19,7 +19,7 @@ public class MedicamentoCompradoRepository : GenericRepository<MedicamentoCompra
     {
         return await _context.MedicamentosComprados
         .Include(p => p.Compra)
-        .Include(p => p.Medicamento)
+        .Include(p => p.Medicamento).ThenInclude(p => p.Persona)
         .ToListAsync();
     }
 

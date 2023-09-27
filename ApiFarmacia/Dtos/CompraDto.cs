@@ -5,5 +5,5 @@ public class CompraDto
     public DateTime FechaCompra { get; set; }
     public int ProveedorIdFk { get; set; }
     public PersonaDto Persona { get; set; }
-    public MedicamentoCompradoDto MedicamentoComprado{ get; set; }
+    public List<MedicamentoCompradoDto> MedicamentoComprados{ get; set; }
 }
