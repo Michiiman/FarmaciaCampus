@@ -12,5 +12,6 @@ public class MappingProfiles : Profile
         CreateMap<Persona,PersonaDto>().ReverseMap();
         CreateMap<TipoPersona,TipoPersonaDto>().ReverseMap();
         CreateMap<TipoDocumento,TipoDocumentoDto>().ReverseMap();
+        CreateMap<Receta,RecetaDto>().ReverseMap();
     }
 }
