@@ -18,17 +18,10 @@ public class RecetaRepository : GenericRepository<Receta>,IReceta
     public override async Task<IEnumerable<Receta>> GetAllAsync()
     {
         return await _context.Recetas
-<<<<<<< HEAD
         .Include(p => p.Paciente).ThenInclude(p => p.TipoPersona)
         .Include(p => p.Paciente).ThenInclude(p => p.TipoDocumento)
         .Include(p => p.Doctor).ThenInclude(p => p.TipoPersona)
         .Include(p => p.Doctor).ThenInclude(p => p.TipoDocumento)
-=======
-        .Include(p => p.Paciente)//.ThenInclude(p => p.TipoPersona)
-        //.Include(p => p.Paciente).ThenInclude(p => p.TipoDocumento)
-        //.Include(p => p.Doctor).ThenInclude(p => p.TipoPersona)
-        .Include(p => p.Doctor)//.ThenInclude(p => p.TipoDocumento)
->>>>>>> Alejandro
         .ToListAsync();
     }
 

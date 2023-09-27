@@ -5259,19 +5259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
-      "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj",
-      "projectName": "Persistence",
-      "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+      "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj",
       "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\obj\\",
->>>>>>> Alejandro
+      "outputPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5286,13 +5278,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
-=======
-            "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj"
->>>>>>> Alejandro
+            "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {
+              "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj"
             }
           }
         }
@@ -5339,5 +5326,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

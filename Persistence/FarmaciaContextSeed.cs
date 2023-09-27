@@ -13,7 +13,6 @@ public class FarmaciaContextSeed
         try
         {
             var ruta = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-<<<<<<< HEAD
 
             if (!context.Rols.Any())
             {
@@ -27,8 +26,6 @@ public class FarmaciaContextSeed
                     }
                 }
             }
-=======
->>>>>>> Alejandro
             if (!context.TiposPersonas.Any())
             {
                 using (var readerTipoPersonas = new StreamReader(ruta + @"/Data/Csv/TipoPersona.csv"))
@@ -85,7 +82,6 @@ public class FarmaciaContextSeed
 
                 }
             }
-<<<<<<< HEAD
             if (!context.Telefonos.Any())
             {
                 using (var reader = new StreamReader(ruta + @"\Data\Csv/Telefono.csv"))
@@ -114,8 +110,6 @@ public class FarmaciaContextSeed
                     }
                 }
             }
-=======
->>>>>>> Alejandro
             if (!context.Medicamentos.Any())
             {
                 using (var reader = new StreamReader(ruta + @"\Data\Csv/Medicamento.csv"))
@@ -136,10 +130,6 @@ public class FarmaciaContextSeed
                                 Id = item.Id,
                                 Nombre = item.Nombre,
                                 Precio = item.Precio,
-<<<<<<< HEAD
-=======
-                                Stock = item.Stock,
->>>>>>> Alejandro
                                 FechaExpiracion = item.FechaExpiracion,
                                 TipoMedicamento = item.TipoMedicamento,
                                 ProveedorIdFk = item.ProveedorIdFk
@@ -149,10 +139,6 @@ public class FarmaciaContextSeed
                         context.Medicamentos.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
-<<<<<<< HEAD
-=======
-
->>>>>>> Alejandro
                 }
             }
             if (!context.Compras.Any())
@@ -175,22 +161,11 @@ public class FarmaciaContextSeed
                                 Id = item.Id,
                                 FechaCompra = item.FechaCompra,
                                 ProveedorIdFk = item.ProveedorIdFk
-<<<<<<< HEAD
                             });
                         }
                         context.Compras.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
-=======
-                                
-                            });
-                        }
-
-                        context.Compras.AddRange(entidad);
-                        await context.SaveChangesAsync();
-                    }
-
->>>>>>> Alejandro
                 }
             }
             if (!context.MedicamentosComprados.Any())
@@ -215,7 +190,6 @@ public class FarmaciaContextSeed
                                 MedicamentoIdFk = item.MedicamentoIdFk,
                                 CantidadComprada = item.CantidadComprada,
                                 PrecioCompra = item.PrecioCompra
-<<<<<<< HEAD
                             });
                         }
                         context.MedicamentosComprados.AddRange(entidad);
@@ -224,19 +198,6 @@ public class FarmaciaContextSeed
                 }
             }
             if (!context.Recetas.Any())
-=======
-                                
-                            });
-                        }
-
-                        context.MedicamentosComprados.AddRange(entidad);
-                        await context.SaveChangesAsync();
-                    }
-
-                }
-            }
-            /*if (!context.Recetas.Any())
->>>>>>> Alejandro
             {
                 using (var reader = new StreamReader(ruta + @"\Data\Csv/Receta.csv"))
                 {
@@ -256,7 +217,6 @@ public class FarmaciaContextSeed
                                 Id = item.Id,
                                 FechaExpedicion = item.FechaExpedicion,
                                 PacienteIdFk = item.PacienteIdFk,
-<<<<<<< HEAD
                                 DoctorIdFk = item.DoctorIdFk
                             });
                         }
@@ -328,19 +288,6 @@ public class FarmaciaContextSeed
 
 
 
-=======
-                                DoctorIdFk = item.DoctorIdFk,
-                                Descripcion = item.Descripcion
-                            });
-                        }
-
-                        context.Recetas.AddRange(entidad);
-                        await context.SaveChangesAsync();
-                    }
-
-                }
-            }*/
->>>>>>> Alejandro
         }
 
         catch (Exception ex)

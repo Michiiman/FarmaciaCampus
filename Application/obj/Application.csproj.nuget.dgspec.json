@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj": {}
+    "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\Application.csproj": {}
   },
   "projects": {
-    "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj": {
+    "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+        "projectUniqueName": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\obj\\",
-=======
-    "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Application\\Application.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Application\\Application.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Application\\Application.csproj",
-        "projectName": "Application",
-        "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Application\\Application.csproj",
+        "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Application\\obj\\",
->>>>>>> Alejandro
+        "outputPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -40,19 +26,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
+              "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj"
               },
-              "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
-                "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj"
-=======
-              "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj"
-              },
-              "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj"
->>>>>>> Alejandro
+              "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
+                "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -86,25 +64,14 @@
         }
       }
     },
-<<<<<<< HEAD
-    "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
+    "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\obj\\",
-=======
-    "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\obj\\",
->>>>>>> Alejandro
+        "outputPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -164,25 +131,14 @@
         }
       }
     },
-<<<<<<< HEAD
-    "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
+    "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Persistence\\obj\\",
-=======
-    "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj",
-        "projectName": "Persistence",
-        "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+        "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Persistence\\obj\\",
->>>>>>> Alejandro
+        "outputPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -197,13 +153,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
-=======
-              "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\DOTNET\\Farmacia\\RepoCamilo\\FarmaciaCampus\\Domain\\Domain.csproj"
->>>>>>> Alejandro
+              "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj"
               }
             }
           }

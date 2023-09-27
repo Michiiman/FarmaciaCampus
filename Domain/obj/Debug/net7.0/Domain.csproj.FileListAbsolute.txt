@@ -10,3 +10,15 @@ C:\Users\APT01-36\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.dll
 C:\Users\APT01-36\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\APT01-36\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\APT01-36\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\ref\Domain.dll
+c:\Users\APT01-38\Documents\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.pdb
+c:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\ref\Domain.dll

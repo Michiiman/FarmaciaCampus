@@ -97,3 +97,13 @@ C:\Users\APT01-36\Desktop\FarmaciaCampus\ApiFarmacia\bin\Debug\net7.0\Data\Csv\M
 C:\Users\APT01-36\Desktop\FarmaciaCampus\ApiFarmacia\bin\Debug\net7.0\Data\Csv\Receta.csv
 C:\Users\APT01-36\Desktop\FarmaciaCampus\ApiFarmacia\bin\Debug\net7.0\Data\Csv\Rol.csv
 C:\Users\APT01-36\Desktop\FarmaciaCampus\ApiFarmacia\bin\Debug\net7.0\Data\Csv\Telefono.csv
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.dll
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\refint\ApiFarmacia.dll
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.pdb
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.csproj.AssemblyReference.cache
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.AssemblyInfoInputs.cache
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.AssemblyInfo.cs
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.csproj.CoreCompileInputs.cache
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.MvcApplicationPartsAssemblyInfo.cache
