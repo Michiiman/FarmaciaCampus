@@ -9,7 +9,7 @@ public class Receta : BaseEntity
     public Persona Paciente { get; set; }
     public int DoctorIdFk { get; set; } 
     public Persona Doctor { get; set; }
-    public string Descripcion { get; set; }
+    
     public FacturaVenta FacturaVenta { get; set; }
     public ICollection<MedicamentoReceta> MedicamentosRecetas{ get; set; }
 

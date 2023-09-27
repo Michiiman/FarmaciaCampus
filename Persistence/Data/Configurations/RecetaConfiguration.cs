@@ -20,12 +20,6 @@ namespace Persistencia.Data.Configuration
             .HasColumnType("date")
             .IsRequired();
 
-            builder.Property(e => e.Descripcion)
-            .HasColumnName("Descripcion")
-            .HasColumnType("varchar")
-            .HasMaxLength(100)
-            .IsRequired();
-
             builder.HasOne(p => p.Paciente)
             .WithMany(p => p.Pacientes)
             .HasForeignKey(p => p.PacienteIdFk);

@@ -5278,11 +5278,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+      "projectUniqueName": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+      "projectPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\APT01-36\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\obj\\",
+      "outputPath": "c:\\Users\\APT01-36\\Desktop\\FarmaciaCampus\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\APT01-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
