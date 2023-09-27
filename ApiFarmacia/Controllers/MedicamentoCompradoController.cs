@@ -5,15 +5,11 @@ using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiFarmacia.Controllers;
-<<<<<<< HEAD
-
-=======
->>>>>>> Alejandro
-public class RecetaController : BaseApiController
+public class MedicamentoCompradoController : BaseApiController
 {
     private readonly IUnitOfWork unitOfWork;
     private readonly IMapper mapper;
-    public RecetaController( IUnitOfWork unitOfWork, IMapper mapper)
+    public MedicamentoCompradoController( IUnitOfWork unitOfWork, IMapper mapper)
     {
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
@@ -22,36 +18,32 @@ public class RecetaController : BaseApiController
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<RecetaDto>>> Get()
+    public async Task<ActionResult<IEnumerable<MedicamentoCompradoDto>>> Get()
     {
-        var entidad = await unitOfWork.Recetas.GetAllAsync();
-        return mapper.Map<List<RecetaDto>>(entidad);
+        var entidad = await unitOfWork.MedicamentosComprados.GetAllAsync();
+        return mapper.Map<List<MedicamentoCompradoDto>>(entidad);
     }
 
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-<<<<<<< HEAD
-
-=======
->>>>>>> Alejandro
-    public async Task<ActionResult<RecetaDto>> Get(int id)
+    public async Task<ActionResult<MedicamentoCompradoDto>> Get(int id)
     {
-        var entidad = await unitOfWork.Recetas.GetByIdAsync(id);
+        var entidad = await unitOfWork.MedicamentosComprados.GetByIdAsync(id);
         if (entidad == null){
             return NotFound();
         }
-        return this.mapper.Map<RecetaDto>(entidad);
+        return this.mapper.Map<MedicamentoCompradoDto>(entidad);
     }
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<Receta>> Post(RecetaDto entidadDto)
+    public async Task<ActionResult<MedicamentoComprado>> Post(MedicamentoCompradoDto entidadDto)
     {
-        var entidad = this.mapper.Map<Receta>(entidadDto);
-        this.unitOfWork.Recetas.Add(entidad);
+        var entidad = this.mapper.Map<MedicamentoComprado>(entidadDto);
+        this.unitOfWork.MedicamentosComprados.Add(entidad);
         await unitOfWork.SaveAsync();
         if(entidad == null)
         {
@@ -60,43 +52,33 @@ public class RecetaController : BaseApiController
         entidadDto.Id = entidad.Id;
         return CreatedAtAction(nameof(Post), new {id = entidadDto.Id}, entidadDto);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> Alejandro
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<RecetaDto>> Put(int id, [FromBody]RecetaDto entidadDto){
+    public async Task<ActionResult<MedicamentoCompradoDto>> Put(int id, [FromBody]MedicamentoCompradoDto entidadDto){
         if(entidadDto == null)
         {
             return NotFound();
         }
-        var entidad = this.mapper.Map<Receta>(entidadDto);
-        unitOfWork.Recetas.Update(entidad);
+        var entidad = this.mapper.Map<MedicamentoComprado>(entidadDto);
+        unitOfWork.MedicamentosComprados.Update(entidad);
         await unitOfWork.SaveAsync();
         return entidadDto;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> Alejandro
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(int id){
-        var entidad = await unitOfWork.Recetas.GetByIdAsync(id);
+        var entidad = await unitOfWork.MedicamentosComprados.GetByIdAsync(id);
         if(entidad == null)
         {
             return NotFound();
         }
-        unitOfWork.Recetas.Remove(entidad);
+        unitOfWork.MedicamentosComprados.Remove(entidad);
         await unitOfWork.SaveAsync();
         return NoContent();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> Alejandro
 }

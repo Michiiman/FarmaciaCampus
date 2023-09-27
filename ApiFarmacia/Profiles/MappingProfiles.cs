@@ -12,6 +12,15 @@ public class MappingProfiles : Profile
         CreateMap<Persona,PersonaDto>().ReverseMap();
         CreateMap<TipoPersona,TipoPersonaDto>().ReverseMap();
         CreateMap<TipoDocumento,TipoDocumentoDto>().ReverseMap();
+<<<<<<< HEAD
+=======
+        CreateMap<Medicamento,MedicamentoDto>().ReverseMap();
+        CreateMap<MedicamentoComprado,MedicamentoCompradoDto>().ReverseMap();
+        CreateMap<MedicamentoVendido,MedicamentoVendidoDto>().ReverseMap();
+        CreateMap<MedicamentoReceta,MedicamentoRecetaDto>().ReverseMap();
+        CreateMap<Compra,CompraDto>().ReverseMap();
+        CreateMap<MedicamentoComprado,MedicamentoCompradoDto>().ReverseMap();
+>>>>>>> Alejandro
         CreateMap<Receta,RecetaDto>().ReverseMap();
     }
 }

@@ -1,6 +1,10 @@
 Id,Nombre
 1,Administrador
 2,Empleado
+<<<<<<< HEAD
 3,Paciente
 4,Doctor
+=======
+3,Doctor
+>>>>>>> Alejandro
 
