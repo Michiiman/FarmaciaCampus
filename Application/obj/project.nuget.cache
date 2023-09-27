@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZbHx19YsXUHfeS6juML6aP8qEkEks/J8ZPgjgoMbOXbr8INeZHMpRi11x14yxl3SqZZdGzfFGT1Ol0nU/ZMWeg==",
+  "dgSpecHash": "L3Fy/eEq+NUdxQ5fwjOPvpGebd0HCio9nW3IHwvAWKBWR4rjtSf2I0MEsya/DBlX5ziIyB5Jx/251Q/manCMnw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\APT01-38\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\APT01-38\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
@@ -97,12 +97,5 @@
     "C:\\Users\\APT01-38\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\APT01-38\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Application\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

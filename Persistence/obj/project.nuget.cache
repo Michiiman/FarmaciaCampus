@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SaQUPueOxmNvQpLH09Fhxq/+madFSqNkEPgBH7tuoNxb+wI4fWXujTBI3GRqMNBPGtoZCtbTCvr1fSsXt8q4cg==",
+  "dgSpecHash": "KGfw0i/yps5W9vnshtr0EKNk7pvW/+7lp6Fon+lw+kEPQUj+XO/kJq+LdNGgc+xAl6ojNV1r0wWQsbmZON+BAg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj",
+  "projectFilePath": "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\APT01-38\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\APT01-38\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
@@ -97,12 +97,5 @@
     "C:\\Users\\APT01-38\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\APT01-38\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Persistence\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

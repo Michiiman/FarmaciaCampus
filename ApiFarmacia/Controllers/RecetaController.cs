@@ -5,10 +5,6 @@ using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiFarmacia.Controllers;
-<<<<<<< HEAD
-
-=======
->>>>>>> Alejandro
 public class RecetaController : BaseApiController
 {
     private readonly IUnitOfWork unitOfWork;
@@ -32,10 +28,6 @@ public class RecetaController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-<<<<<<< HEAD
-
-=======
->>>>>>> Alejandro
     public async Task<ActionResult<RecetaDto>> Get(int id)
     {
         var entidad = await unitOfWork.Recetas.GetByIdAsync(id);
@@ -60,10 +52,6 @@ public class RecetaController : BaseApiController
         entidadDto.Id = entidad.Id;
         return CreatedAtAction(nameof(Post), new {id = entidadDto.Id}, entidadDto);
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> Alejandro
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -78,10 +66,6 @@ public class RecetaController : BaseApiController
         await unitOfWork.SaveAsync();
         return entidadDto;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> Alejandro
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -95,8 +79,4 @@ public class RecetaController : BaseApiController
         await unitOfWork.SaveAsync();
         return NoContent();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> Alejandro
 }
