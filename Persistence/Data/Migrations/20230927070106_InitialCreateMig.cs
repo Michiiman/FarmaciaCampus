@@ -149,9 +149,7 @@ namespace Persistence.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     FechaExpedicion = table.Column<DateTime>(type: "date", nullable: false),
                     PacienteIdFk = table.Column<int>(type: "int", nullable: false),
-                    DoctorIdFk = table.Column<int>(type: "int", nullable: false),
-                    Descripcion = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    DoctorIdFk = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -260,7 +258,8 @@ namespace Persistence.Data.Migrations
                     PacienteIdFk = table.Column<int>(type: "int", nullable: false),
                     EmpleadoIdFk = table.Column<int>(type: "int", nullable: false),
                     RecetaIdFk = table.Column<int>(type: "int", nullable: false),
-                    PrecioTotal = table.Column<int>(type: "int", nullable: false)
+                    PrecioTotal = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
@@ -294,7 +293,9 @@ namespace Persistence.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     MedicamentosIdfk = table.Column<int>(type: "int", nullable: false),
                     RecetaIdFk = table.Column<int>(type: "int", nullable: false),
-                    Cantidad = table.Column<int>(type: "int", nullable: false)
+                    Descripcion = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Cantidad = table.Column<int>(type: "int", maxLength: 20, nullable: false)
                 },
                 constraints: table =>
                 {

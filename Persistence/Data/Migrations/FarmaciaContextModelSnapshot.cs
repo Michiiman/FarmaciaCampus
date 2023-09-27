@@ -55,8 +55,10 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("PacienteIdFk")
                         .HasColumnType("int");
 
-                    b.Property<int>("PrecioTotal")
-                        .HasColumnType("int")
+                    b.Property<string>("PrecioTotal")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
                         .HasColumnName("PrecioTotal");
 
                     b.Property<int>("RecetaIdFk")
@@ -149,7 +151,13 @@ namespace Persistence.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Cantidad")
+                        .HasMaxLength(20)
                         .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar(250)");
 
                     b.Property<int>("MedicamentosIdfk")
                         .HasColumnType("int");
@@ -238,12 +246,6 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar")
-                        .HasColumnName("Descripcion");
 
                     b.Property<int>("DoctorIdFk")
                         .HasColumnType("int");

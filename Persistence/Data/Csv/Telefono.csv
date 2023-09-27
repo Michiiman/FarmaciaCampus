@@ -1,6 +1,11 @@
-Id,Nombre
-1,Administrador
-2,Empleado
-3,Paciente
-4,Doctor
-
+Id,PersonaIdFk,TipoTelefono,Numero
+1,1,Personal,3153654789
+2,2,Personal,3153654789
+3,3,Personal,3153654789
+4,4,Personal,3153654789
+5,5,Personal,3153654789
+6,6,Personal,3153654789
+7,7,Personal,3153654789
+8,8,Corporativo,3153654789
+9,9,Personal,3153654789
+10,10,Personal,3153654789

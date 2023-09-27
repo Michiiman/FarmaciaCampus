@@ -10,7 +10,7 @@ public class FacturaVenta : BaseEntity
     public Persona Empleado { get; set; }
     public int RecetaIdFk { get; set; }
     public Receta Receta { get; set; }
-    public int PrecioTotal { get; set; }
+    public string PrecioTotal { get; set; }
     public ICollection<MedicamentoVendido> MedicamentosVendidos { get; set; }
 
 }
