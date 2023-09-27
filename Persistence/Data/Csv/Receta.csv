@@ -1,0 +1,4 @@
+Id,FechaExpedicion,PacienteIdFk,DoctorIdFk,Descripcion
+1,2023-09-10,1,2,Receta de prueba
+2,2023-12-10,1,2,Receta de prueba 2
+3,2023-12-10,1,2,Receta de prueba 3

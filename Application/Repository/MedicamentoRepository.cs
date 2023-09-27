@@ -18,7 +18,8 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
     public override async Task<IEnumerable<Medicamento>> GetAllAsync()
     {
         return await _context.Medicamentos
-        .Include(p => p.Persona)
+        .Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
+        .Include(p => p.Persona).ThenInclude(p => p.TipoDocumento)
         .ToListAsync();
     }
 

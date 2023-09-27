@@ -13,40 +13,6 @@ public class FarmaciaContextSeed
         try
         {
             var ruta = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
-            if (!context.Medicamentos.Any())
-            {
-                using (var reader = new StreamReader(ruta + @"\Data\Csv/Medicamento.csv"))
-                {
-                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
-                    {
-                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
-                        MissingFieldFound = null
-                    }))
-                    {
-                        // Resto de tu código para leer y procesar el archivo CSV
-                        var list = csv.GetRecords<Medicamento>();
-                        List<Medicamento> entidad = new List<Medicamento>();
-                        foreach (var item in list)
-                        {
-                            entidad.Add(new Medicamento
-                            {
-                                Id = item.Id,
-                                Nombre = item.Nombre,
-                                Precio = item.Precio,
-                                Stock = item.Stock,
-                                FechaExpiracion = item.FechaExpiracion,
-                                TipoMedicamento = item.TipoMedicamento,
-                                ProveedorIdFk = item.ProveedorIdFk
-                            });
-                        }
-
-                        context.Medicamentos.AddRange(entidad);
-                        await context.SaveChangesAsync();
-                    }
-
-                }
-            }
             if (!context.TiposPersonas.Any())
             {
                 using (var readerTipoPersonas = new StreamReader(ruta + @"/Data/Csv/TipoPersona.csv"))
@@ -103,7 +69,72 @@ public class FarmaciaContextSeed
 
                 }
             }
+            if (!context.Medicamentos.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/Medicamento.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Medicamento>();
+                        List<Medicamento> entidad = new List<Medicamento>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Medicamento
+                            {
+                                Id = item.Id,
+                                Nombre = item.Nombre,
+                                Precio = item.Precio,
+                                Stock = item.Stock,
+                                FechaExpiracion = item.FechaExpiracion,
+                                TipoMedicamento = item.TipoMedicamento,
+                                ProveedorIdFk = item.ProveedorIdFk
+                            });
+                        }
+
+                        context.Medicamentos.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+
+                }
+            }
+            if (!context.Recetas.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/Receta.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Receta>();
+                        List<Receta> entidad = new List<Receta>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Receta
+                            {
+                                Id = item.Id,
+                                FechaExpedicion = item.FechaExpedicion,
+                                PacienteIdFk = item.PacienteIdFk,
+                                DoctorIdFk = item.DoctorIdFk,
+                                Descripcion = item.Descripcion
+                            });
+                        }
+
+                        context.Recetas.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+
+                }
+            }
         }
+
         catch (Exception ex)
         {
             var logger = loggerFactory.CreateLogger<FarmaciaContext>();

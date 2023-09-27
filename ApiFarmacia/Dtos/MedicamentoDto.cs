@@ -8,4 +8,5 @@ public class MedicamentoDto
     public DateTime FechaExpiracion { get; set; }
     public string TipoMedicamento { get; set; }
     public int ProveedorIdFk { get; set; }
+    public PersonaDto Persona {get;set;}
 }
