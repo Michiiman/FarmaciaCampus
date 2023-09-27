@@ -22,8 +22,10 @@ namespace Persistencia.Data.Configuration
 
             builder.Property(e => e.PrecioTotal)
             .HasColumnName("PrecioTotal")
-            .HasColumnType("int")
-            .IsRequired();
+            .HasColumnType("varchar")
+            .IsRequired()
+            .HasMaxLength(50);
+
 
             builder.HasOne(p => p.Paciente)
             .WithMany(p => p.PacientesVentas)

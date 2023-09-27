@@ -19,8 +19,8 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
     public override async Task<IEnumerable<Persona>> GetAllAsync()
     {
         return await _context.Personas
-        .Include(p => p.TipoPersona)
-        .Include(p => p.TipoDocumento)
+        .Include(p => p.TipoPersona).ThenInclude(p => p.Nombre)
+        .Include(p => p.TipoDocumento).ThenInclude(p => p.Nombre)
         .ToListAsync();
     }
 

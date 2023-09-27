@@ -13,6 +13,19 @@ public class FarmaciaContextSeed
         try
         {
             var ruta = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            if (!context.Rols.Any())
+            {
+                using (var readerTipoPersonas = new StreamReader(ruta + @"/Data/Csv/Rol.csv"))
+                {
+                    using (var csv = new CsvReader(readerTipoPersonas, CultureInfo.InvariantCulture))
+                    {
+                        var list = csv.GetRecords<Rol>();
+                        context.Rols.AddRange(list);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
             if (!context.TiposPersonas.Any())
             {
                 using (var readerTipoPersonas = new StreamReader(ruta + @"/Data/Csv/TipoPersona.csv"))
@@ -69,6 +82,34 @@ public class FarmaciaContextSeed
 
                 }
             }
+            if (!context.Telefonos.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/Telefono.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Telefono>();
+                        List<Telefono> entidad = new List<Telefono>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Telefono
+                            {
+                                Id = item.Id,
+                                PersonaIdFk = item.PersonaIdFk,
+                                TipoTelefono = item.TipoTelefono,
+                                Numero = item.Numero
+                            });
+                        }
+                        context.Telefonos.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
             if (!context.Medicamentos.Any())
             {
                 using (var reader = new StreamReader(ruta + @"\Data\Csv/Medicamento.csv"))
@@ -89,7 +130,6 @@ public class FarmaciaContextSeed
                                 Id = item.Id,
                                 Nombre = item.Nombre,
                                 Precio = item.Precio,
-                                Stock = item.Stock,
                                 FechaExpiracion = item.FechaExpiracion,
                                 TipoMedicamento = item.TipoMedicamento,
                                 ProveedorIdFk = item.ProveedorIdFk
@@ -99,7 +139,6 @@ public class FarmaciaContextSeed
                         context.Medicamentos.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
-
                 }
             }
             if (!context.Compras.Any())
@@ -122,14 +161,11 @@ public class FarmaciaContextSeed
                                 Id = item.Id,
                                 FechaCompra = item.FechaCompra,
                                 ProveedorIdFk = item.ProveedorIdFk
-                                
                             });
                         }
-
                         context.Compras.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
-
                 }
             }
             if (!context.MedicamentosComprados.Any())
@@ -154,17 +190,14 @@ public class FarmaciaContextSeed
                                 MedicamentoIdFk = item.MedicamentoIdFk,
                                 CantidadComprada = item.CantidadComprada,
                                 PrecioCompra = item.PrecioCompra
-                                
                             });
                         }
-
                         context.MedicamentosComprados.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
-
                 }
             }
-            /*if (!context.Recetas.Any())
+            if (!context.Recetas.Any())
             {
                 using (var reader = new StreamReader(ruta + @"\Data\Csv/Receta.csv"))
                 {
@@ -184,17 +217,77 @@ public class FarmaciaContextSeed
                                 Id = item.Id,
                                 FechaExpedicion = item.FechaExpedicion,
                                 PacienteIdFk = item.PacienteIdFk,
-                                DoctorIdFk = item.DoctorIdFk,
-                                Descripcion = item.Descripcion
+                                DoctorIdFk = item.DoctorIdFk
                             });
                         }
-
                         context.Recetas.AddRange(entidad);
                         await context.SaveChangesAsync();
                     }
-
                 }
-            }*/
+            }
+            if (!context.FacturasVentas.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/FacturaVenta.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<FacturaVenta>();
+                        List<FacturaVenta> entidad = new List<FacturaVenta>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new FacturaVenta
+                            {
+                                Id = item.Id,
+                                FechaFactura = item.FechaFactura,
+                                PacienteIdFk = item.PacienteIdFk,
+                                EmpleadoIdFk = item.EmpleadoIdFk,
+                                RecetaIdFk = item.RecetaIdFk,
+                                PrecioTotal=item.PrecioTotal
+                            });
+                        }
+                        context.FacturasVentas.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
+            if (!context.MedicamentoVendidos.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/MedicamentoVendido.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<MedicamentoVendido>();
+                        List<MedicamentoVendido> entidad = new List<MedicamentoVendido>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new MedicamentoVendido
+                            {
+                                Id = item.Id,
+                                FacturaVentaIdFk = item.FacturaVentaIdFk,
+                                MedicamentoIdFk = item.MedicamentoIdFk,
+                                CantidadVendida = item.CantidadVendida,
+                                Descripcion = item.Descripcion
+                            });
+                        }
+                        context.MedicamentoVendidos.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
+
+
+
+
         }
 
         catch (Exception ex)

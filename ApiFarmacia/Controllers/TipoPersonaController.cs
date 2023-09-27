@@ -21,7 +21,7 @@ namespace ApiFarmacia.Controllers;
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<IEnumerable<TipoPersonaDto>>> Get()
     {
-        var entidad = await unitOfWork.Personas.GetAllAsync();
+        var entidad = await unitOfWork.TiposPersonas.GetAllAsync();
         return mapper.Map<List<TipoPersonaDto>>(entidad);
     }
 
@@ -30,22 +30,22 @@ namespace ApiFarmacia.Controllers;
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-    public async Task<ActionResult<PersonaDto>> Get(int id)
+    public async Task<ActionResult<TipoPersonaDto>> Get(int id)
     {
-        var entidad = await unitOfWork.Personas.GetByIdAsync(id);
+        var entidad = await unitOfWork.TiposPersonas.GetByIdAsync(id);
         if (entidad == null){
             return NotFound();
         }
-        return this.mapper.Map<PersonaDto>(entidad);
+        return this.mapper.Map<TipoPersonaDto>(entidad);
     }
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<Persona>> Post(PersonaDto entidadDto)
+    public async Task<ActionResult<Persona>> Post(TipoPersonaDto entidadDto)
     {
-        var entidad = this.mapper.Map<Persona>(entidadDto);
-        this.unitOfWork.Personas.Add(entidad);
+        var entidad = this.mapper.Map<TipoPersona>(entidadDto);
+        this.unitOfWork.TiposPersonas.Add(entidad);
         await unitOfWork.SaveAsync();
         if(entidad == null)
         {
@@ -58,13 +58,13 @@ namespace ApiFarmacia.Controllers;
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<PersonaDto>> Put(int id, [FromBody]PersonaDto entidadDto){
+    public async Task<ActionResult<TipoPersonaDto>> Put(int id, [FromBody]TipoPersonaDto entidadDto){
         if(entidadDto == null)
         {
             return NotFound();
         }
-        var entidad = this.mapper.Map<Persona>(entidadDto);
-        unitOfWork.Personas.Update(entidad);
+        var entidad = this.mapper.Map<TipoPersona>(entidadDto);
+        unitOfWork.TiposPersonas.Update(entidad);
         await unitOfWork.SaveAsync();
         return entidadDto;
     }
@@ -72,12 +72,12 @@ namespace ApiFarmacia.Controllers;
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(int id){
-        var entidad = await unitOfWork.Personas.GetByIdAsync(id);
+        var entidad = await unitOfWork.TiposPersonas.GetByIdAsync(id);
         if(entidad == null)
         {
             return NotFound();
         }
-        unitOfWork.Personas.Remove(entidad);
+        unitOfWork.TiposPersonas.Remove(entidad);
         await unitOfWork.SaveAsync();
         return NoContent();
     }

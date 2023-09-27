@@ -14,6 +14,15 @@ namespace Persistencia.Data.Configuration
 
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
+            
+            builder.Property(p => p.Descripcion)
+            .IsRequired()
+            .HasMaxLength(250);
+
+            builder.Property(p => p.Cantidad)
+            .IsRequired()
+            .HasColumnType("int")
+            .HasMaxLength(20);
 
             builder.HasOne(p => p.Medicamento)
             .WithMany(p => p.MedicamentosRecetas)

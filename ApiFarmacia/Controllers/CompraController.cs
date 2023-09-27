@@ -52,7 +52,6 @@ public class CompraController : BaseApiController
         entidadDto.Id = entidad.Id;
         return CreatedAtAction(nameof(Post), new {id = entidadDto.Id}, entidadDto);
     }
-
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -67,7 +66,6 @@ public class CompraController : BaseApiController
         await unitOfWork.SaveAsync();
         return entidadDto;
     }
-
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -81,4 +79,5 @@ public class CompraController : BaseApiController
         await unitOfWork.SaveAsync();
         return NoContent();
     }
+
 }
