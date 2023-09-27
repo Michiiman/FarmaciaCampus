@@ -1,8 +1,8 @@
 Id,FacturaVentaIdFk,MedicamentoIdFk,CantidadVendida,Descripcion
 1,1,1,10,Descripcion de prueba
-2,2,1,10,Descripcion de prueba
+2,3,1,10,Descripcion de prueba
 3,3,3,20,Descripcion de prueba
-4,4,2,30,Descripcion de prueba
-5,4,5,8,Descripcion de prueba
+4,5,2,30,Descripcion de prueba
+5,1,5,8,Descripcion de prueba
 6,5,1,30,Descripcion de prueba
 7,5,6,30,Descripcion de prueba
