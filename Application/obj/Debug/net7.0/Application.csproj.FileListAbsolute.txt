@@ -54,3 +54,4 @@ C:\Users\APT01-38\Documents\FarmaciaCampus\Application\bin\Debug\net7.0\Persiste
 C:\Users\APT01-38\Documents\FarmaciaCampus\Application\bin\Debug\net7.0\Domain.pdb
 c:\Users\APT01-38\Documents\FarmaciaCampus\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
 c:\Users\APT01-38\Documents\FarmaciaCampus\Application\obj\Debug\net7.0\ref\Application.dll
+C:\Users\APT01-38\Documents\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv

@@ -196,3 +196,4 @@ C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\scopedcs
 C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.csproj.CopyComplete
 C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.genruntimeconfig.cache
 C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ref\ApiFarmacia.dll
+C:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv
