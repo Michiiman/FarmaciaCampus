@@ -6624,11 +6624,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "projectUniqueName": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
       "projectName": "ApiFarmacia",
-      "projectPath": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
       "packagesPath": "C:\\Users\\Camilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\obj\\",
+      "outputPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6644,8 +6644,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj"
+            "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj": {
+              "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj"
             }
           }
         }

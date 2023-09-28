@@ -5278,11 +5278,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+      "projectUniqueName": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
+      "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Camilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\obj\\",
+      "outputPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5297,11 +5297,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
+            "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
+              "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
-              "projectPath": "C:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj"
+            "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
+              "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj"
             }
           }
         }
