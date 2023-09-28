@@ -17,18 +17,22 @@ public class FacturaVentaRepository : GenericRepository<FacturaVenta>, IFacturaV
     public override async Task<IEnumerable<FacturaVenta>> GetAllAsync()
     {
         return await _context.FacturasVentas
-        .Include(p => p.Paciente)
-        .Include(p => p.Empleado)
-        .Include(p => p.Receta)
+        .Include(p => p.Paciente).ThenInclude(p => p.TipoPersona)
+        .Include(p => p.Paciente).ThenInclude(p => p.TipoDocumento)
+        .Include(p => p.Empleado).ThenInclude(p=>p.TipoPersona)
+        .Include(p => p.Empleado).ThenInclude(p=>p.TipoDocumento)
+        .Include(p => p.Receta).ThenInclude(p => p.Doctor)
         .ToListAsync();
     }
 
     public override async Task<FacturaVenta> GetByIdAsync(int id)
     {
         return await _context.FacturasVentas
-        .Include(p => p.Paciente)
-        .Include(p => p.Empleado)
-        .Include(p => p.Receta)
+        .Include(p => p.Paciente).ThenInclude(p => p.TipoPersona)
+        .Include(p => p.Paciente).ThenInclude(p => p.TipoDocumento)
+        .Include(p => p.Empleado).ThenInclude(p=>p.TipoPersona)
+        .Include(p => p.Empleado).ThenInclude(p=>p.TipoDocumento)
+        .Include(p => p.Receta).ThenInclude(p => p.Doctor)
         .FirstOrDefaultAsync(p => p.Id == id);
     }
 }
