@@ -31,6 +31,7 @@ public class UserService : IUserService
         {
             Email = registerDto.Email,
             Username = registerDto.Username,
+            EmpleadoIdfk=registerDto.EmpleadoIdfk
         };
         usuario.Password = _passwordHasher.HashPassword(usuario, registerDto.Password);
         var usuarioExiste = _unitOfWork.Users

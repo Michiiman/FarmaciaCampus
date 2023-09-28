@@ -115,3 +115,4 @@ D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Applicati
 D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.pdb
 d:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\ref\Application.dll
 >>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
+C:\Users\APT01-36\Desktop\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv

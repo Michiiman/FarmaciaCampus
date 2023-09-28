@@ -399,3 +399,4 @@ D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\ApiFarmac
 d:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ApiFarmacia.genruntimeconfig.cache
 d:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\ApiFarmacia\obj\Debug\net7.0\ref\ApiFarmacia.dll
 >>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
+C:\Users\APT01-36\Desktop\FarmaciaCampus\ApiFarmacia\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv
