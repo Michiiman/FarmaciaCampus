@@ -1,11 +1,12 @@
 using System.Text;
-//using ApiFarmacia.Helpers;
-//using ApiFarmacia.Services;
+using ApiFarmacia.Helpers;
+using ApiFarmacia.Services;
 using Application.UnitOfWork;
 using AspNetCoreRateLimit;
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -28,8 +29,9 @@ public static class ApplicationServiceExtension
     public static void AddAplicacionServices(this IServiceCollection services)
     {
         services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
-        //services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IUserService,UserService>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IAuthorizationHandler, GlobalVerbRoleHandler>();
     }
 
     public static void ConfigureApiVersioning(this IServiceCollection services)
@@ -67,10 +69,10 @@ public static class ApplicationServiceExtension
 
     public static void AddJwt(this IServiceCollection services, IConfiguration configuration)
     {
-        //Configuration from AppSettings
-        //services.Configure<JWT>(configuration.GetSection("JWT"));
+        //Configuration from AppSettings;
+        services.Configure<JWT>(configuration.GetSection("JWT"));
 
-        //Adding Athentication - JWT
+        //Adding Athentication - JWT;
         services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
