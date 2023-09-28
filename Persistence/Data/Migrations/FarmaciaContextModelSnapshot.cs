@@ -159,7 +159,7 @@ namespace Persistence.Data.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("varchar(250)");
 
-                    b.Property<int>("MedicamentosIdfk")
+                    b.Property<int>("MedicamentoIdFk")
                         .HasColumnType("int");
 
                     b.Property<int>("RecetaIdFk")
@@ -167,11 +167,11 @@ namespace Persistence.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MedicamentosIdfk");
+                    b.HasIndex("MedicamentoIdFk");
 
                     b.HasIndex("RecetaIdFk");
 
-                    b.ToTable("MedicamentosReceta", (string)null);
+                    b.ToTable("MedicamentoReceta", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.MedicamentoVendido", b =>
@@ -469,7 +469,7 @@ namespace Persistence.Data.Migrations
                 {
                     b.HasOne("Domain.Entities.Medicamento", "Medicamento")
                         .WithMany("MedicamentosRecetas")
-                        .HasForeignKey("MedicamentosIdfk")
+                        .HasForeignKey("MedicamentoIdFk")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

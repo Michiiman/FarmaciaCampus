@@ -26,7 +26,7 @@ public class MedicamentoRecetaRepository : GenericRepository<MedicamentoReceta>,
     public override async Task<MedicamentoReceta> GetByIdAsync(int id)
     {
         return await _context.MedicamentosRecetas
-        .Include(p => p.Medicamento)
+        .Include(p => p.Medicamento).ThenInclude(p => p.Persona)
         .Include(p => p.Receta)
         .FirstOrDefaultAsync(p => p.Id == id);
     }

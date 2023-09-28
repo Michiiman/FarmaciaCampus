@@ -286,12 +286,12 @@ namespace Persistence.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "MedicamentosReceta",
+                name: "MedicamentoReceta",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    MedicamentosIdfk = table.Column<int>(type: "int", nullable: false),
+                    MedicamentoIdFk = table.Column<int>(type: "int", nullable: false),
                     RecetaIdFk = table.Column<int>(type: "int", nullable: false),
                     Descripcion = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -299,15 +299,15 @@ namespace Persistence.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MedicamentosReceta", x => x.Id);
+                    table.PrimaryKey("PK_MedicamentoReceta", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MedicamentosReceta_Medicamento_MedicamentosIdfk",
-                        column: x => x.MedicamentosIdfk,
+                        name: "FK_MedicamentoReceta_Medicamento_MedicamentoIdFk",
+                        column: x => x.MedicamentoIdFk,
                         principalTable: "Medicamento",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MedicamentosReceta_Receta_RecetaIdFk",
+                        name: "FK_MedicamentoReceta_Receta_RecetaIdFk",
                         column: x => x.RecetaIdFk,
                         principalTable: "Receta",
                         principalColumn: "Id",
@@ -407,13 +407,13 @@ namespace Persistence.Data.Migrations
                 column: "MedicamentoIdFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MedicamentosReceta_MedicamentosIdfk",
-                table: "MedicamentosReceta",
-                column: "MedicamentosIdfk");
+                name: "IX_MedicamentoReceta_MedicamentoIdFk",
+                table: "MedicamentoReceta",
+                column: "MedicamentoIdFk");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MedicamentosReceta_RecetaIdFk",
-                table: "MedicamentosReceta",
+                name: "IX_MedicamentoReceta_RecetaIdFk",
+                table: "MedicamentoReceta",
                 column: "RecetaIdFk");
 
             migrationBuilder.CreateIndex(
@@ -470,7 +470,7 @@ namespace Persistence.Data.Migrations
                 name: "MedicamentoComprado");
 
             migrationBuilder.DropTable(
-                name: "MedicamentosReceta");
+                name: "MedicamentoReceta");
 
             migrationBuilder.DropTable(
                 name: "MedicamentoVendido");

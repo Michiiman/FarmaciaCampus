@@ -303,7 +303,7 @@ public class FarmaciaContextSeed
                             entidad.Add(new MedicamentoReceta
                             {
                                 Id = item.Id,
-                                MedicamentosIdfk = item.MedicamentosIdfk,
+                                MedicamentoIdFk = item.MedicamentoIdFk,
                                 RecetaIdFk = item.RecetaIdFk,
                                 Descripcion = item.Descripcion,
                                 Cantidad = item.Cantidad

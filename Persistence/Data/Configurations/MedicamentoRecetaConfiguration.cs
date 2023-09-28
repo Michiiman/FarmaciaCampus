@@ -10,7 +10,7 @@ namespace Persistencia.Data.Configuration
         {
             // Aquí puedes configurar las propiedades de la entidad Marca
             // utilizando el objeto 'builder'.
-            builder.ToTable("MedicamentosReceta");
+            builder.ToTable("MedicamentoReceta");
 
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
@@ -26,7 +26,7 @@ namespace Persistencia.Data.Configuration
 
             builder.HasOne(p => p.Medicamento)
             .WithMany(p => p.MedicamentosRecetas)
-            .HasForeignKey(p => p.MedicamentosIdfk);
+            .HasForeignKey(p => p.MedicamentoIdFk);
 
             builder.HasOne(p => p.Receta)
             .WithMany(p => p.MedicamentosRecetas)
