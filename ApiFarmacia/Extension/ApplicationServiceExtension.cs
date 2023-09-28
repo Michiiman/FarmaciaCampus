@@ -31,7 +31,7 @@ public static class ApplicationServiceExtension
         services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
         services.AddScoped<IUserService,UserService>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
-        services.AddScoped<IAuthorizationHandler, GlobalVerbRoleHandler>();
+    
     }
 
     public static void ConfigureApiVersioning(this IServiceCollection services)
