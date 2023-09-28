@@ -18,16 +18,22 @@ public class MedicamentoVendidoRepository : GenericRepository<MedicamentoVendido
     public override async Task<IEnumerable<MedicamentoVendido>> GetAllAsync()
     {
         return await _context.MedicamentoVendidos
-        .Include(p => p.FacturaVenta)
-        .Include(p => p.Medicamento)
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Paciente).ThenInclude(p=>p.TipoPersona)
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Empleado).ThenInclude(p=>p.TipoPersona)
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Paciente).ThenInclude(p=>p.TipoDocumento)
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Empleado).ThenInclude(p=>p.TipoDocumento)
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Receta)
+        .Include(p => p.Medicamento).ThenInclude(p=>p.Persona).ThenInclude(p=>p.TipoPersona)
         .ToListAsync();
     }
 
     public override async Task<MedicamentoVendido> GetByIdAsync(int id)
     {
         return await _context.MedicamentoVendidos
-        .Include(p => p.FacturaVenta)
-        .Include(p => p.Medicamento) 
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Paciente).ThenInclude(p=>p.TipoPersona)
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Empleado).ThenInclude(p=>p.TipoPersona)
+        .Include(p => p.FacturaVenta).ThenInclude(p=>p.Receta)
+        .Include(p => p.Medicamento).ThenInclude(p=>p.Persona)
         .FirstOrDefaultAsync(p => p.Id == id);
     }
 }

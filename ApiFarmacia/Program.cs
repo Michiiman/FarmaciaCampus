@@ -1,7 +1,8 @@
 using System.Reflection;
 using ApiFarmacia.Extension;
-//using ApiFarmacia.Helpers;
+using ApiFarmacia.Helpers;
 using AspNetCoreRateLimit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 using Serilog;
@@ -24,6 +25,13 @@ builder.Services.ConfigureCors();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.AddAplicacionServices();
+
+builder.Services.AddAuthorization(opts=>{
+    opts.DefaultPolicy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .AddRequirements(new GlobalVerbRoleRequirement())
+    .Build();
+});
 
 builder.Services.AddDbContext<FarmaciaContext>(options =>
 {
@@ -48,7 +56,7 @@ using (var scope = app.Services.CreateScope())
 	{
 		var context = services.GetRequiredService<FarmaciaContext>();
 		await context.Database.MigrateAsync();
-		//await FarmaciaContextSeed.SeedRolesAsync(context,loggerFactory);
+		await FarmaciaContextSeed.SeedRolesAsync(context,loggerFactory);
 		await FarmaciaContextSeed.SeedAsync(context,loggerFactory);
 	}
 	catch (Exception ex)
@@ -57,6 +65,7 @@ using (var scope = app.Services.CreateScope())
 		_logger.LogError(ex, "Ocurrio un error durante la migracion");
 	}
 }
+
 
 app.UseHttpsRedirection();
 

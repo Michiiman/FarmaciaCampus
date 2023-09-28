@@ -4,6 +4,7 @@ using CsvHelper;
 using CsvHelper.Configuration;
 using Domain.Entities;
 using Microsoft.Extensions.Logging;
+
 namespace Persistence;
 
 public class FarmaciaContextSeed
@@ -283,13 +284,32 @@ public class FarmaciaContextSeed
                         await context.SaveChangesAsync();
                     }
                 }
-            }
-
-
-
-
+            }   
         }
 
+        catch (Exception ex)
+        {
+            var logger = loggerFactory.CreateLogger<FarmaciaContext>();
+            logger.LogError(ex.Message);
+        }
+    }
+    public static async Task SeedRolesAsync(FarmaciaContext context, ILoggerFactory loggerFactory)
+    {
+        try
+        {
+            if (!context.Rols.Any())
+            {
+                var roles = new List<Rol>()
+                        {
+                            new Rol{Id=1, Nombre="Administrador"},
+                            new Rol{Id=2, Nombre="Empleado"},
+                            new Rol{Id=3, Nombre="Paciente"},
+                            new Rol{Id=4, Nombre="Doctor"},
+                        };
+                context.Rols.AddRange(roles);
+                await context.SaveChangesAsync();
+            }
+        }
         catch (Exception ex)
         {
             var logger = loggerFactory.CreateLogger<FarmaciaContext>();

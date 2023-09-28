@@ -171,10 +171,6 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-
-
-    
-
     public IRol Rols
     {
         get{
