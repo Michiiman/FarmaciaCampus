@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "Domain",
-        "Dto&Controller"
+        "Dto&Controller",
+        "ApiFarmacia"
     ]
 }

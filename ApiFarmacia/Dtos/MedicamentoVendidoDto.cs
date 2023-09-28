@@ -9,4 +9,7 @@ namespace ApiFarmacia.Dtos;
         public FacturaVentaDto FacturaVenta{ get; set; }
         public int MedicamentoIdFk{ get; set; }
         public MedicamentoDto Medicamento{ get; set; }
+        public string CantidadVendida{get;set;}
+        public string Descripcion{get;set;}
+
     }
