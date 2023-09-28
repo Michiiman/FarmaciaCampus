@@ -6619,11 +6619,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Camilo\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\dalgr\\.nuget\\packages\\": {}
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
       "projectName": "ApiFarmacia",
       "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
@@ -6632,6 +6637,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "projectName": "ApiFarmacia",
+      "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+      "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\ApiFarmacia\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -6644,8 +6659,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+<<<<<<< HEAD
             "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj": {
               "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj"
+=======
+            "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Application\\Application.csproj": {
+              "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Application\\Application.csproj"
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
             }
           }
         }

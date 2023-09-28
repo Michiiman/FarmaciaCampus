@@ -22,6 +22,7 @@ C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.dll
 C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.pdb
 c:\Users\APT01-38\Documents\FarmaciaCampus\Domain\obj\Debug\net7.0\ref\Domain.dll
+<<<<<<< HEAD
 C:\Users\Camilo\Desktop\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.deps.json
 C:\Users\Camilo\Desktop\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.dll
 C:\Users\Camilo\Desktop\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.pdb
@@ -34,3 +35,17 @@ C:\Users\Camilo\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.dll
 C:\Users\Camilo\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\Camilo\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\Camilo\Desktop\FarmaciaCampus\Domain\obj\Debug\net7.0\ref\Domain.dll
+=======
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\bin\Debug\net7.0\Domain.pdb
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\Domain.pdb
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Domain\obj\Debug\net7.0\ref\Domain.dll
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea

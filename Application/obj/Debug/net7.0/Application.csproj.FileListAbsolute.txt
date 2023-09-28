@@ -54,6 +54,7 @@ C:\Users\APT01-38\Documents\FarmaciaCampus\Application\bin\Debug\net7.0\Persiste
 C:\Users\APT01-38\Documents\FarmaciaCampus\Application\bin\Debug\net7.0\Domain.pdb
 c:\Users\APT01-38\Documents\FarmaciaCampus\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
 c:\Users\APT01-38\Documents\FarmaciaCampus\Application\obj\Debug\net7.0\ref\Application.dll
+<<<<<<< HEAD
 C:\Users\Camilo\Desktop\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Compra.csv
 C:\Users\Camilo\Desktop\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Medicamento.csv
 C:\Users\Camilo\Desktop\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\MedicamentoComprado.csv
@@ -82,3 +83,35 @@ C:\Users\Camilo\Desktop\FarmaciaCampus\Application\obj\Debug\net7.0\Application.
 C:\Users\Camilo\Desktop\FarmaciaCampus\Application\obj\Debug\net7.0\refint\Application.dll
 C:\Users\Camilo\Desktop\FarmaciaCampus\Application\obj\Debug\net7.0\Application.pdb
 c:\Users\Camilo\Desktop\FarmaciaCampus\Application\obj\Debug\net7.0\ref\Application.dll
+=======
+C:\Users\APT01-38\Documents\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Compra.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Medicamento.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\TipoDocumento.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\TipoPersona.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\FacturaVenta.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\MedicamentoComprado.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\MedicamentoVendido.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Persona.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Receta.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Rol.csv
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Data\Csv\Telefono.csv
+d:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Application.deps.json
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Application.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Application.pdb
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Domain.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Persistence.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Persistence.pdb
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\bin\Debug\net7.0\Domain.pdb
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+d:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\refint\Application.dll
+D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\Application.pdb
+d:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Application\obj\Debug\net7.0\ref\Application.dll
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea

@@ -284,7 +284,43 @@ public class FarmaciaContextSeed
                         await context.SaveChangesAsync();
                     }
                 }
+<<<<<<< HEAD
             }   
+=======
+            }
+
+            if (!context.MedicamentosRecetas.Any())
+            {
+                using (var reader = new StreamReader(ruta + @"\Data\Csv/MedicamentosReceta.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<MedicamentoReceta>();
+                        List<MedicamentoReceta> entidad = new List<MedicamentoReceta>();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new MedicamentoReceta
+                            {
+                                Id = item.Id,
+                                MedicamentoIdFk = item.MedicamentoIdFk,
+                                RecetaIdFk = item.RecetaIdFk,
+                                Descripcion = item.Descripcion,
+                                Cantidad = item.Cantidad
+                            });
+                        }
+                        context.MedicamentosRecetas.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+            }
+
+
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
         }
 
         catch (Exception ex)

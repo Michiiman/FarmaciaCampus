@@ -5273,11 +5273,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Camilo\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\dalgr\\.nuget\\packages\\": {}
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
       "projectName": "Application",
       "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Application\\Application.csproj",
@@ -5286,6 +5291,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Application\\Application.csproj",
+      "projectName": "Application",
+      "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5297,11 +5312,19 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+<<<<<<< HEAD
             "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj": {
               "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Domain\\Domain.csproj"
             },
             "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
               "projectPath": "c:\\Users\\Camilo\\Desktop\\FarmaciaCampus\\Persistence\\Persistence.csproj"
+=======
+            "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {
+              "projectPath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj"
+            },
+            "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj"
+>>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
             }
           }
         }
