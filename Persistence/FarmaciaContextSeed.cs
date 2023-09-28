@@ -284,9 +284,6 @@ public class FarmaciaContextSeed
                         await context.SaveChangesAsync();
                     }
                 }
-<<<<<<< HEAD
-            }   
-=======
             }
 
             if (!context.MedicamentosRecetas.Any())
@@ -320,7 +317,6 @@ public class FarmaciaContextSeed
             }
 
 
->>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
         }
 
         catch (Exception ex)

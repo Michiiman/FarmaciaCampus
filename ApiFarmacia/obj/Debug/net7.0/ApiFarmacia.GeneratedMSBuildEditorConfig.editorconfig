@@ -9,17 +9,9 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ApiFarmacia
 build_property.RootNamespace = ApiFarmacia
-<<<<<<< HEAD
-build_property.ProjectDir = c:\Users\Camilo\Desktop\FarmaciaCampus\ApiFarmacia\
+build_property.ProjectDir = c:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\Camilo\Desktop\FarmaciaCampus\ApiFarmacia
-=======
-build_property.ProjectDir = D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\ApiFarmacia\
-build_property.RazorLangVersion = 7.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\ApiFarmacia
->>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
+build_property.MSBuildProjectDirectory = c:\Users\APT01-38\Documents\FarmaciaCampus\ApiFarmacia
 build_property._RazorSourceGeneratorDebug = 
