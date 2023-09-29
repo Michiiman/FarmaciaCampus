@@ -1,11 +1,11 @@
 Id,Nombre,Precio,Stock,FechaExpiracion,TipoMedicamento,ProveedorIdFk
 1,Paracetamol,120,150,2024-10-10,Venta Libre,1
 2,Ibuprofeno,80,150,2024-10-10,Venta Libre,2
-3,Aspirina,200,150,2024-10-10,Venta Libre,1
+3,Aspirina,200,45,2024-10-10,Venta Libre,1
 4,Amoxicilina,120,150,2024-10-10,Venta Libre,2
 5,Cetirizina,200,150,2024-10-10,Venta Libre,1
-6,Losartan,100,150,2024-10-10,Venta bajo fórmula médica,1
+6,Losartan,100,25,2024-10-10,Venta bajo fórmula médica,1
 7,Metformina,30,150,2024-10-10,Venta bajo fórmula médica,2
 8,Atorvastatina,100,150,2024-10-10,Venta bajo fórmula médica,2
-9,Clonazepam,20,150,2024-10-10,Medicamentos de control especial,2
+9,Clonazepam,20,49,2024-10-10,Medicamentos de control especial,2
 10,Loratadina,200,150,2024-10-10,Venta Libre,1

@@ -1,4 +1,5 @@
 
+using System.Threading.Tasks.Dataflow;
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -29,5 +30,18 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
         .Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
         .Include(p => p.Persona).ThenInclude(p => p.TipoDocumento)
         .FirstOrDefaultAsync(p => p.Id == id);
+    }
+
+    public async Task<IEnumerable<Medicamento>> GetMedicamentoMenosDe50(int cantidad)
+    {
+
+        return await _context.Medicamentos
+            .Where(p => p.Stock < cantidad)
+            .OrderByDescending(p => p.Id)
+            .Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
+            .Include(p => p.Persona).ThenInclude(p => p.TipoDocumento)
+            .Take(cantidad)
+            .ToListAsync();
+
     }
 }
