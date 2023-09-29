@@ -23,21 +23,47 @@ public class CompraRepository : GenericRepository<Compra>, ICompra
             .ToListAsync();
     }
     
-    /*
-    public override async Task<IEnumerable<Compra>> GetAllWiMe()
-    {
-        var compras = await (
-            from c in _context.Compras
-            join m in _context.MedicamentosComprados on c.Id equals m.CompraIdFk
-            .Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
+    /*.Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
             .Include(p => p.Persona).ThenInclude(p => p.TipoDocumento)
-            .Include(p => p.MedicamentosComprados)
-            .ToListAsync()
-            );
-        
-        return compras;
-    }
-    */
+            .Include(p => p.MedicamentosComprados)*/
+
+    public async Task<IEnumerable<object>> GetAllWiMe()
+{
+    var compras = await (
+        from c in _context.Compras
+        join mc in _context.MedicamentosComprados on c.Id equals mc.CompraIdFk
+        join me in _context.Medicamentos on mc.MedicamentoIdFk equals me.Id
+        select new 
+        {
+            idCompra = c.Id,
+            fechaCompra = c.FechaCompra,
+            proveedor = c.ProveedorIdFk,
+            medicamentosComprados = new 
+            {
+                id = mc.Id,
+                Nombre = me.Nombre,
+                compraIdFk = mc.CompraIdFk,
+                MedicamentoIdFk = mc.MedicamentoIdFk,
+                CantidadComprada = mc.CantidadComprada,
+                PrecioCompra = mc.PrecioCompra
+                // Agrega aquí más propiedades de MedicamentosComprados si las necesitas
+            }
+        }
+    ).ToListAsync();
+
+    // Agrupar los resultados por compra
+    var comprasAgrupadas = compras.GroupBy(c => new { c.idCompra, c.fechaCompra, c.proveedor })
+        .Select(g => new 
+        {
+            idCompra = g.Key.idCompra,
+            fechaCompra = g.Key.fechaCompra,
+            proveedor = g.Key.proveedor,
+            medicamentosComprados = g.Select(c => c.medicamentosComprados)
+        });
+
+    return comprasAgrupadas;
+}
+
 
     public override async Task<Compra> GetByIdAsync(int id)
     {

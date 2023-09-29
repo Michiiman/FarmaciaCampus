@@ -38,16 +38,14 @@ public class CompraController : BaseApiController
     }
 
     //metodo para traer inclueyendo los medicamentos
-    /*
-    [HttpGet]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<CompraDto>>> GetAllAsync()
+    
+    [HttpGet("consultaAlejo")]
+    public async Task<IEnumerable<object>> GetWiMe()
     {
-        var entidad = await unitOfWork.Compras.GetAllAsync();
-        return mapper.Map<List<CompraDto>>(entidad);
+        var entidad = await unitOfWork.Compras.GetAllWiMe();
+        return mapper.Map<IEnumerable<object>>(entidad);
     }
-    */
+    
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

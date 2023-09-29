@@ -4,5 +4,5 @@ namespace Domain.Interfaces;
 
     public interface IMedicamentoComprado : IGenericRepo<MedicamentoComprado>
     {
-
+        
     }

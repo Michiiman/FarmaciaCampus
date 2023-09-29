@@ -8,9 +8,9 @@ namespace ApiFarmacia.Controllers;
 
 public class FacturaVentaController : BaseApiController
 {
-     private readonly IUnitOfWork unitOfWork;
+    private readonly IUnitOfWork unitOfWork;
     private readonly IMapper mapper;
-    public FacturaVentaController( IUnitOfWork unitOfWork, IMapper mapper)
+    public FacturaVentaController(IUnitOfWork unitOfWork, IMapper mapper)
     {
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
@@ -33,7 +33,8 @@ public class FacturaVentaController : BaseApiController
     public async Task<ActionResult<FacturaVentaDto>> Get(int id)
     {
         var entidad = await unitOfWork.FacturasVentas.GetByIdAsync(id);
-        if (entidad == null){
+        if (entidad == null)
+        {
             return NotFound();
         }
         return this.mapper.Map<FacturaVentaDto>(entidad);
@@ -47,19 +48,20 @@ public class FacturaVentaController : BaseApiController
         var entidad = this.mapper.Map<FacturaVenta>(entidadDto);
         this.unitOfWork.FacturasVentas.Add(entidad);
         await unitOfWork.SaveAsync();
-        if(entidad == null)
+        if (entidad == null)
         {
             return BadRequest();
         }
         entidadDto.Id = entidad.Id;
-        return CreatedAtAction(nameof(Post), new {id = entidadDto.Id}, entidadDto);
+        return CreatedAtAction(nameof(Post), new { id = entidadDto.Id }, entidadDto);
     }
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<FacturaVentaDto>> Put(int id, [FromBody]FacturaVentaDto entidadDto){
-        if(entidadDto == null)
+    public async Task<ActionResult<FacturaVentaDto>> Put(int id, [FromBody] FacturaVentaDto entidadDto)
+    {
+        if (entidadDto == null)
         {
             return NotFound();
         }
@@ -71,9 +73,10 @@ public class FacturaVentaController : BaseApiController
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Delete(int id){
+    public async Task<IActionResult> Delete(int id)
+    {
         var entidad = await unitOfWork.FacturasVentas.GetByIdAsync(id);
-        if(entidad == null)
+        if (entidad == null)
         {
             return NotFound();
         }
