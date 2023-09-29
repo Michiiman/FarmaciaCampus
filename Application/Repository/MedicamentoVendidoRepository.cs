@@ -1,6 +1,6 @@
-
 using Domain.Entities;
 using Domain.Interfaces;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
@@ -36,4 +36,7 @@ public class MedicamentoVendidoRepository : GenericRepository<MedicamentoVendido
         .Include(p => p.Medicamento).ThenInclude(p=>p.Persona)
         .FirstOrDefaultAsync(p => p.Id == id);
     }
+    
+ 
+
 }

@@ -83,7 +83,6 @@ public class MedicamentoController : BaseApiController
     }
 
     [HttpGet("consulta1/{cantidad}")]
-
     public async Task<ActionResult<IEnumerable<MedicamentoDto>>> GetMedicamentoMenosDe50(int cantidad)
     {
         var entidad = await unitOfWork.Medicamentos.GetMedicamentoMenosDe50(cantidad);

@@ -82,4 +82,11 @@ public class PersonaController : BaseApiController
         return NoContent();
     }
 
+    
+     [HttpGet("consulta12/{data}")]
+    public async Task<ActionResult<IEnumerable<PersonaDto>>> GetPacientesCompraronParacetamol(string data)
+    {
+        var entidad = await unitOfWork.Personas.GetPacientesCompraronParacetamol(data);
+        return mapper.Map<List<PersonaDto>>(entidad);
+    }
 }
