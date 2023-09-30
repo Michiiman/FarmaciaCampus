@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6+asTRXW8a77grntkTicxjKBf0/p4pF+c36SHHBvhvKWAyiNpAZTzrVH6i1vJtL85yw72Lwil6Q5X+wD1H7CNQ==",
+  "dgSpecHash": "JN1kpF66vHpJ3LG6/tTDFzERM1uun8IYpgt8sYC8qRIUadMQvMQnIG7Z5K0nsPSOYbKy83egigULZfQwxEAw5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
+  "projectFilePath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\ApiFarmacia\\ApiFarmacia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\APT01-38\\.nuget\\packages\\aspnetcoreratelimit\\5.0.0\\aspnetcoreratelimit.5.0.0.nupkg.sha512",
     "C:\\Users\\APT01-38\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",

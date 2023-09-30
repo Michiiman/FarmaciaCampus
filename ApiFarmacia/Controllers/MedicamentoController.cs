@@ -9,7 +9,7 @@ public class MedicamentoController : BaseApiController
 {
     private readonly IUnitOfWork unitOfWork;
     private readonly IMapper mapper;
-    public MedicamentoController( IUnitOfWork unitOfWork, IMapper mapper)
+    public MedicamentoController(IUnitOfWork unitOfWork, IMapper mapper)
     {
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
@@ -31,7 +31,8 @@ public class MedicamentoController : BaseApiController
     public async Task<ActionResult<MedicamentoDto>> Get(int id)
     {
         var entidad = await unitOfWork.Medicamentos.GetByIdAsync(id);
-        if (entidad == null){
+        if (entidad == null)
+        {
             return NotFound();
         }
         return this.mapper.Map<MedicamentoDto>(entidad);
@@ -45,20 +46,21 @@ public class MedicamentoController : BaseApiController
         var entidad = this.mapper.Map<Medicamento>(entidadDto);
         this.unitOfWork.Medicamentos.Add(entidad);
         await unitOfWork.SaveAsync();
-        if(entidad == null)
+        if (entidad == null)
         {
             return BadRequest();
         }
         entidadDto.Id = entidad.Id;
-        return CreatedAtAction(nameof(Post), new {id = entidadDto.Id}, entidadDto);
+        return CreatedAtAction(nameof(Post), new { id = entidadDto.Id }, entidadDto);
     }
 
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<MedicamentoDto>> Put(int id, [FromBody]MedicamentoDto entidadDto){
-        if(entidadDto == null)
+    public async Task<ActionResult<MedicamentoDto>> Put(int id, [FromBody] MedicamentoDto entidadDto)
+    {
+        if (entidadDto == null)
         {
             return NotFound();
         }
@@ -71,9 +73,10 @@ public class MedicamentoController : BaseApiController
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Delete(int id){
+    public async Task<IActionResult> Delete(int id)
+    {
         var entidad = await unitOfWork.Medicamentos.GetByIdAsync(id);
-        if(entidad == null)
+        if (entidad == null)
         {
             return NotFound();
         }
@@ -81,4 +84,23 @@ public class MedicamentoController : BaseApiController
         await unitOfWork.SaveAsync();
         return NoContent();
     }
+    //metodos especificos para endpoints
+    [HttpGet("Less50")]
+    public async Task<ActionResult<IEnumerable<MedicamentoDto>>> Get50Less()
+    {
+        var entidad = await unitOfWork.Medicamentos.GetLess50();
+        return mapper.Map<List<MedicamentoDto>>(entidad);
+    }
+
+    [HttpGet("ByProveedorName")]
+    public async Task<ActionResult<IEnumerable<object>>> GetProveedorName(string proveedor)
+    {
+        var entidad = await unitOfWork.Medicamentos.GetProveedorName(proveedor);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
+    }
+
 }

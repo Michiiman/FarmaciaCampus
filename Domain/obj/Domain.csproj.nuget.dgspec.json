@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {}
+    "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {
+    "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\APT01-38\\Documents\\FarmaciaCampus\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"

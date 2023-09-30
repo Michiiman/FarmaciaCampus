@@ -20,6 +20,7 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
         return await _context.Medicamentos
         .Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
         .Include(p => p.Persona).ThenInclude(p => p.TipoDocumento)
+        //.OrderByDescending(p. => p.TipoDocumento)
         .ToListAsync();
     }
 
@@ -29,5 +30,36 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
         .Include(p => p.Persona).ThenInclude(p => p.TipoPersona)
         .Include(p => p.Persona).ThenInclude(p => p.TipoDocumento)
         .FirstOrDefaultAsync(p => p.Id == id);
+    }
+
+    //controllers para metodos especificos
+    public async Task<IEnumerable<Medicamento>> GetLess50()
+    {
+        return await _context.Medicamentos
+            .Where(me => me.Stock < 50)
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<object>> GetProveedorName(string proveedor)
+    {
+        var medicamentos = await
+        (
+            from me in _context.Medicamentos
+            join p in _context.Personas on me.ProveedorIdFk equals p.Id
+            where (p.Nombre.Contains(proveedor) && p.Id == 5)
+            select new
+            {
+                IdProvedor = me.ProveedorIdFk,
+                Id = me.Id,
+                Nombre = me.Nombre,
+                PrecioVenta = me.Precio,
+                Stock = me.Stock,
+                FechaExpiracion = me.FechaExpiracion,
+                TipoMedicamento = me.TipoMedicamento
+            }
+           // OrderByDescending(me => me.Id)
+            
+        ).ToListAsync();
+        return medicamentos;
     }
 }
