@@ -46,10 +46,12 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
         (
             from me in _context.Medicamentos
             join p in _context.Personas on me.ProveedorIdFk equals p.Id
-            where (p.Nombre.Contains(proveedor) && p.Id == 5)
+            join tp in _context.TiposPersonas on p.TipoPersonaIdFk equals tp.Id
+            where (p.Nombre.Contains(proveedor) && tp.Id == 5)
             select new
             {
                 IdProvedor = me.ProveedorIdFk,
+                NombreProveedor = p.Nombre,
                 Id = me.Id,
                 Nombre = me.Nombre,
                 PrecioVenta = me.Precio,
