@@ -35,9 +35,14 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
     //controllers para metodos especificos
     public async Task<IEnumerable<Medicamento>> GetLess50()
     {
-        return await _context.Medicamentos
-            .Where(me => me.Stock < 50)
-            .ToListAsync();
+        var medicamentos = await
+        (
+            from me in _context.Medicamentos
+            where(me.Stock < 50)
+            orderby (me.Id)
+            select me
+        ).ToListAsync();
+        return medicamentos;
     }
 
     public async Task<IEnumerable<object>> GetProveedorName(string proveedor)
@@ -48,6 +53,7 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
             join p in _context.Personas on me.ProveedorIdFk equals p.Id
             join tp in _context.TiposPersonas on p.TipoPersonaIdFk equals tp.Id
             where (p.Nombre.Contains(proveedor) && tp.Id == 5)
+            orderby(me.Id)
             select new
             {
                 IdProvedor = me.ProveedorIdFk,
@@ -63,5 +69,48 @@ public class MedicamentoRepository : GenericRepository<Medicamento>, IMedicament
             
         ).ToListAsync();
         return medicamentos;
+    }
+
+    public async Task<IEnumerable<Medicamento>> GetAfterDate(DateTime date)
+    {
+        
+            var medicamentos = await (
+                from me in _context.Medicamentos
+                where (me.FechaExpiracion < date)
+                orderby(me.FechaExpiracion)
+                select me
+            ).ToListAsync();
+            return medicamentos;
+    }
+    public async Task<Medicamento> GetMostExpensive()
+    {
+        var medicamento = await (
+                from me in _context.Medicamentos
+                orderby(me.Precio) descending
+                select me
+            ).FirstOrDefaultAsync();
+            return medicamento;
+    }
+
+    public async Task<IEnumerable<Medicamento>> GetHighherPriceAndUnderStock(int price, int stock)
+    {
+        var medicamento = await (
+                from me in _context.Medicamentos
+                where (me.Precio > price && me.Stock < stock)
+                orderby(me.Id) descending
+                select me
+            ).ToListAsync();
+            return medicamento;
+    }
+    public async Task<IEnumerable<Medicamento>> GetExpireYear(int year)
+    {
+        
+            var medicamentos = await (
+                from me in _context.Medicamentos
+                where (me.FechaExpiracion.Year == year)
+                orderby(me.FechaExpiracion)
+                select me
+            ).ToListAsync();
+            return medicamentos;
     }
 }

@@ -5297,8 +5297,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {
-              "projectPath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj"
+            "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj"
             },
             "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj": {
               "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Persistence\\Persistence.csproj"

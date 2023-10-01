@@ -103,4 +103,43 @@ public class MedicamentoController : BaseApiController
         return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
     }
 
+    [HttpGet("AfterDueDate")]
+    public async Task<ActionResult<IEnumerable<Medicamento>>> GetAfterDueDate(DateTime date)
+    {
+        var entidad = await unitOfWork.Medicamentos.GetAfterDate(date);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<MedicamentoDto>>(entidad));
+    }
+
+    [HttpGet("GetMostExpensive")]
+    public async Task<ActionResult<MedicamentoDto>> GetMostExpensive()
+    {
+        var entidad = await unitOfWork.Medicamentos.GetMostExpensive();
+        return this.mapper.Map<MedicamentoDto>(entidad);
+    }
+
+    [HttpGet("GetHighherPriceAndUnderStock")]
+    public async Task<ActionResult<IEnumerable<Medicamento>>> GetHighherPrice_UnderStock(int price, int stock)
+    {
+        var entidad = await unitOfWork.Medicamentos.GetHighherPriceAndUnderStock(price, stock);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<MedicamentoDto>>(entidad));
+    }
+
+    [HttpGet("GetExpireYear")]
+    public async Task<ActionResult<IEnumerable<Medicamento>>> GetExpireYear(int year)
+    {
+        var entidad = await unitOfWork.Medicamentos.GetExpireYear(year);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<MedicamentoDto>>(entidad));
+    }    
 }

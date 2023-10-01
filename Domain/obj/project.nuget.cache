@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RhJ+O6cqqN4HH+R6VotzFEzaX8SIBW5qsn+uIGMC+eYzvK1hR8kK7aIEOyufNQSUJAbmPX5rXiE9QSCd/tix2A==",
+  "dgSpecHash": "GO8tgeNEcgc5NTTdc6pEMmT0ua+GQhMmf17P+PURkap7tMgTf7PQGczK4ZiVDNYVIM7c+kFnNhns5hMI2xgHyA==",
   "success": true,
-  "projectFilePath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dalgr\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\dalgr\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

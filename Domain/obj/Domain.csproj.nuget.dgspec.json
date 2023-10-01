@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {}
+    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {
+    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
-        "outputPath": "d:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\obj\\",
+        "outputPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\Farmacia\\FarmaciaCampus\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
