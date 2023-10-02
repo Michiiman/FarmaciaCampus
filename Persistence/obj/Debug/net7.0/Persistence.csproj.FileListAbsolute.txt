@@ -108,3 +108,4 @@ D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Persisten
 d:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\Farmacia\FarmaciaCampus\Persistence\obj\Debug\net7.0\ref\Persistence.dll
 >>>>>>> dcd7fc75281367ae22583f90ab7b707a3ce691ea
 C:\Users\APT01-36\Desktop\FarmaciaCampus\Persistence\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv
+C:\Users\Camilo\Desktop\FarmaciaCampus\Persistence\bin\Debug\net7.0\Data\Csv\MedicamentosReceta.csv

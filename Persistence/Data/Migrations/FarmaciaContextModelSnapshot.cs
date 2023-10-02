@@ -48,7 +48,7 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("EmpleadoIdFk")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaFactura")
+                    b.Property<DateOnly>("FechaFactura")
                         .HasColumnType("date")
                         .HasColumnName("FechaFactura");
 

@@ -11,7 +11,7 @@ using Persistence;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(FarmaciaContext))]
-    [Migration("20230929020928_InitialCreateMig")]
+    [Migration("20231001062440_InitialCreateMig")]
     partial class InitialCreateMig
     {
         /// <inheritdoc />
@@ -51,7 +51,7 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("EmpleadoIdFk")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaFactura")
+                    b.Property<DateOnly>("FechaFactura")
                         .HasColumnType("date")
                         .HasColumnName("FechaFactura");
 

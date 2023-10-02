@@ -254,7 +254,7 @@ namespace Persistence.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FechaFactura = table.Column<DateTime>(type: "date", nullable: false),
+                    FechaFactura = table.Column<DateOnly>(type: "date", nullable: false),
                     PacienteIdFk = table.Column<int>(type: "int", nullable: false),
                     EmpleadoIdFk = table.Column<int>(type: "int", nullable: false),
                     RecetaIdFk = table.Column<int>(type: "int", nullable: false),

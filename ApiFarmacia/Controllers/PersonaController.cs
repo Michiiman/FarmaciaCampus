@@ -83,10 +83,40 @@ public class PersonaController : BaseApiController
     }
 
     
-     [HttpGet("consulta12/{data}")]
+    [HttpGet("consulta12/{data}")]
     public async Task<ActionResult<IEnumerable<PersonaDto>>> GetPacientesCompraronParacetamol(string data)
     {
         var entidad = await unitOfWork.Personas.GetPacientesCompraronParacetamol(data);
         return mapper.Map<List<PersonaDto>>(entidad);
     }
+
+    [HttpGet("consulta25")]
+    public async Task<ActionResult<IEnumerable<PersonaDto>>> GetPacientesCompraronParacetamolEn2023(string data,int año)
+    {
+        var entidad = await unitOfWork.Personas.GetPacientesCompraronParacetamolEn2023(data,año);
+        return mapper.Map<List<PersonaDto>>(entidad);
+    }
+
+    [HttpGet("consulta22/{año}")]
+    public async Task<ActionResult<object>> GetPersonaQueMasComproEnAño(int año)
+    {
+        var entidad = await unitOfWork.Personas.GetPersonaQueMasComproEnAño(año);
+        var dto = mapper.Map<object>(entidad); // Mapear PersonaCompraDto a object
+        return Ok(dto);
+    }
+    [HttpGet("consulta30/{año}")]
+    public async Task<ActionResult<IEnumerable<PersonaDto>>> GetPersonaQueNoHaComprado2023(int año)
+    {
+        var entidad = await unitOfWork.Personas.GetPersonaQueNoHaComprado2023(año);
+        return mapper.Map<List<PersonaDto>>(entidad);
+    }
+
+    [HttpGet("consulta33/{año}")]
+public async Task<ActionResult<IEnumerable<object>>> GetTotalGastadoPorPacienteEnAño(int año)
+{
+    var entidad = await unitOfWork.Personas.GetTotalGastadoPorPacienteEnAño(año);
+    var dto = mapper.Map<object>(entidad); // Mapear PersonaCompraDto a object
+    return Ok(dto);
+}
+
 }

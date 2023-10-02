@@ -10,3 +10,4 @@ Id,Nombre,TipoDocumentoIdFk,NumeroDocumento,Direccion,TipoPersonaIdFk
 9,Sandra Gomez,2,765432198,cra 70 # 80-90 Copacabana,3
 10,Andres Sanchez,1,654321987,cra 80 # 90-100 Girardota,2
 11,Sandra Gomez,2,765432198,cra 70 # 80-90 Copacabana,3
+    
