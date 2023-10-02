@@ -6,4 +6,3 @@ Id,FacturaVentaIdFk,MedicamentoIdFk,CantidadVendida,Descripcion
 5,3,5,8,Descripcion de prueba
 6,5,1,30,Descripcion de prueba
 7,5,6,30,Descripcion de prueba
-   

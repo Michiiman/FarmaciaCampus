@@ -131,7 +131,7 @@ public class FarmaciaContextSeed
                                 Id = item.Id,
                                 Nombre = item.Nombre,
                                 Precio = item.Precio,
-                                Stock=item.Stock,
+                                Stock = item.Stock,
                                 FechaExpiracion = item.FechaExpiracion,
                                 TipoMedicamento = item.TipoMedicamento,
                                 ProveedorIdFk = item.ProveedorIdFk

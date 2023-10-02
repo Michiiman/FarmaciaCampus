@@ -35,4 +35,16 @@ public class FacturaVentaRepository : GenericRepository<FacturaVenta>, IFacturaV
         .Include(p => p.Receta).ThenInclude(p => p.Doctor)
         .FirstOrDefaultAsync(p => p.Id == id);
     }
+
+    //metodos personalizados para endpoints
+
+    //8. Cantidad total de dinero recaudado por las ventas de medicamentos.
+    public async Task<int> GetRecaudo()
+    {
+        var recaudo = await (
+            from fv in _context.FacturasVentas
+            select fv.PrecioTotal
+        ).SumAsync();
+        return recaudo;
+    }
 }

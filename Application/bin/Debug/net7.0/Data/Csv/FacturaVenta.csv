@@ -4,3 +4,4 @@ Id,FechaFactura,PacienteIdFk,EmpleadoIdFk,RecetaIdFk,PrecioTotal
 3,2023-01-01,3,3,4,5500
 4,2022-09-09,9,4,1,1250
 5,2023-01-01,3,4,3,5500
+  

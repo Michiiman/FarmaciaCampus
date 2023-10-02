@@ -82,4 +82,37 @@ public class MedicamentoVendidoController : BaseApiController
         return NoContent();
     }
 
+    //controllers personalizadso para endpoints
+    [HttpGet("Consulta5/{medicamento}")]
+    public async Task<ActionResult<IEnumerable<object>>> GetVentasMedicamento(string medicamento)
+    {
+        var entidad = await unitOfWork.MedicamentosVendidos.GetVentasMedicamento(medicamento);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
+    }
+
+    [HttpGet("Consulta9")]
+    public async Task<ActionResult<IEnumerable<object>>> GetNoSales()
+    {
+        var entidad = await unitOfWork.MedicamentosVendidos.GetNoSales();
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
+    }
+    
+    [HttpGet("Consulta14")]
+    public async Task<ActionResult<IEnumerable<object>>> GetSalesPerMounth (int year, int month)
+    {
+        var entidad = await unitOfWork.MedicamentosVendidos.GetSalesPerMounth (year, month);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
+    }
 }

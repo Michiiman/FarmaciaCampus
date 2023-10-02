@@ -1,5 +1,5 @@
 Id,Nombre,TipoDocumentoIdFk,NumeroDocumento,Direccion,TipoPersonaIdFk
-1,Juan Robayo,1,1098783303,cra 8# 35-53 Alfonso Lopez,1
+1,Juan Robayo,1,1098783303,cra 8# 35-53 Alfonso Lopez,5
 2,Wiston Leon,1,12345678,cra 12 # 45-78 Provenza,2
 3,Maria Perez,2,3123456789,cra 10 # 20-30 El Poblado,3
 4,Pedro Gonzalez,1,789456123,cra 20 # 30-40 Laureles,4
@@ -10,4 +10,3 @@ Id,Nombre,TipoDocumentoIdFk,NumeroDocumento,Direccion,TipoPersonaIdFk
 9,Sandra Gomez,2,765432198,cra 70 # 80-90 Copacabana,3
 10,Andres Sanchez,1,654321987,cra 80 # 90-100 Girardota,2
 11,Sandra Gomez,2,765432198,cra 70 # 80-90 Copacabana,3
-    

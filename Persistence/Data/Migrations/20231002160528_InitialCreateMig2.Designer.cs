@@ -11,8 +11,8 @@ using Persistence;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(FarmaciaContext))]
-    [Migration("20231001062440_InitialCreateMig")]
-    partial class InitialCreateMig
+    [Migration("20231002160528_InitialCreateMig2")]
+    partial class InitialCreateMig2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,17 +51,15 @@ namespace Persistence.Data.Migrations
                     b.Property<int>("EmpleadoIdFk")
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("FechaFactura")
+                    b.Property<DateTime>("FechaFactura")
                         .HasColumnType("date")
                         .HasColumnName("FechaFactura");
 
                     b.Property<int>("PacienteIdFk")
                         .HasColumnType("int");
 
-                    b.Property<string>("PrecioTotal")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar")
+                    b.Property<int>("PrecioTotal")
+                        .HasColumnType("int")
                         .HasColumnName("PrecioTotal");
 
                     b.Property<int>("RecetaIdFk")
