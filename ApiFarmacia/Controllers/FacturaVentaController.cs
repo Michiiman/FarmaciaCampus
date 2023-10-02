@@ -85,4 +85,13 @@ public class FacturaVentaController : BaseApiController
         return NoContent();
     }
 
+    
+    //controllers personalizadso para endpoints
+    [HttpGet("Consulta8")]
+    public async Task<ActionResult<int>> GetRecaudo()
+    {
+        var entidad = await unitOfWork.FacturasVentas.GetRecaudo();
+        return Ok(this.mapper.Map<int>(entidad));
+    }
+
 }

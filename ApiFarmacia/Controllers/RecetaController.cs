@@ -79,4 +79,16 @@ public class RecetaController : BaseApiController
         await unitOfWork.SaveAsync();
         return NoContent();
     }
+
+    //controllers personalizadso para endpoints
+    [HttpGet("Consulta4/{year}")]
+    public async Task<ActionResult<IEnumerable<object>>> GetBeforeJune(int year)
+    {
+        var entidad = await unitOfWork.Recetas.GetBeforeJune(year);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
+    }
 }
