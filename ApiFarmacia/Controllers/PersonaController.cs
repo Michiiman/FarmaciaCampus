@@ -188,4 +188,25 @@ public class PersonaController : BaseApiController
         return Ok(dto);
     }
 
+    
+    [HttpGet("consulta29")]
+    public async Task<ActionResult<IEnumerable<object>>> GetProveedoresConMenosDe50Stock()
+    {
+        var entidad = await unitOfWork.Personas.GetProveedoresConMenosDe50Stock();
+        return mapper.Map<List<object>>(entidad);
+    }
+
+    [HttpGet("consulta2")]
+    public async Task<ActionResult<IEnumerable<object>>> GetProveedoresMedicamentos()
+    {
+        var entidad = await unitOfWork.Personas.GetProveedoresMedicamentos();
+        return mapper.Map<List<object>>(entidad);
+    }
+
+    [HttpGet("consulta7")]
+    public async Task<ActionResult<IEnumerable<object>>> GetTotalMedicamentosVendidosPorProveedor()
+    {
+        var entidad = await unitOfWork.Personas.GetTotalMedicamentosVendidosPorProveedor();
+        return mapper.Map<List<object>>(entidad);
+    }
 }

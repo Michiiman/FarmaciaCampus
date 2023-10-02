@@ -15,4 +15,9 @@ public interface IPersona : IGenericRepo<Persona>
     Task<IEnumerable<Persona>> GetPersonaQueNoHaComprado2023(int año);
     Task<Object> GetPersonaQueMasComproEnAño(int año);
     Task<IEnumerable<object>> GetTotalGastadoPorPacienteEnAño(int año);
+    //proveedores
+    Task<IEnumerable<object>> GetProveedoresConMenosDe50Stock();
+    Task<IEnumerable<object>> GetProveedoresMedicamentos();
+    Task<IEnumerable<object>> GetTotalMedicamentosVendidosPorProveedor();
 }
+

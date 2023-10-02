@@ -325,4 +325,60 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
 
         return resultado;
     }
+
+    public async Task<IEnumerable<object>> GetProveedoresConMenosDe50Stock()
+    {   
+        var proveedores =  await (from m in _context.Medicamentos
+                                join p in _context.Personas on m.ProveedorIdFk equals p.Id
+                                where p.TipoPersonaIdFk == 5
+                                where m.Stock < 50
+                                select new 
+                                {
+                                    NombreMedicamento=m.Nombre,
+                                    Id = p.Id,
+                                    Nombre = p.Nombre,
+                                    NumeroDocumento = p.NumeroDocumento,
+                                    Direccion = p.Direccion
+                                }
+        ).ToListAsync();
+
+        return proveedores;
+    }
+
+    public async Task<IEnumerable<object>> GetProveedoresMedicamentos()
+    {   
+        var proveedores =  await (from m in _context.Medicamentos
+                                join p in _context.Personas on m.ProveedorIdFk equals p.Id
+                                join t in _context.Telefonos on p.Id equals t.Id
+                                where p.TipoPersonaIdFk == 5
+                                select new 
+                                {
+                                    Id = p.Id,
+                                    Nombre = p.Nombre,
+                                    NumeroDocumento = p.NumeroDocumento,
+                                    Direccion = p.Direccion,
+                                    Numero=t.Numero
+                                }).ToListAsync();
+
+        var distinctProveedores = proveedores.Distinct();
+
+        return distinctProveedores;
+    }
+    
+
+    public async Task<IEnumerable<object>> GetTotalMedicamentosVendidosPorProveedor()
+    {   
+        var totalVendidos = await (from mv in _context.MedicamentoVendidos
+                                join m in _context.Medicamentos on mv.MedicamentoIdFk equals m.Id
+                                join p in _context.Personas on m.ProveedorIdFk equals p.Id
+                                group mv by new { ProveedorId = p.Id, ProveedorNombre = p.Nombre } into g
+                                select new 
+                                {
+                                    ProveedorId = g.Key.ProveedorId,
+                                    ProveedorNombre = g.Key.ProveedorNombre,
+                                    TotalVendido = g.Sum(x => x.CantidadVendida)
+                                }).ToListAsync();
+
+        return totalVendidos;
+    }
 }
