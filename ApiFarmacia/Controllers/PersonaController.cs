@@ -218,7 +218,13 @@ public class PersonaController : BaseApiController
         return Ok(dto);
     }
 
-
+    [HttpGet("consulta11")]
+    public async Task<ActionResult<object>> GetTotalMedicamentosPorProveedor()
+    {
+        var entidad = await unitOfWork.Personas.GetTotalMedicamentosPorProveedor();
+        var dto = mapper.Map<object>(entidad); 
+        return Ok(dto);
+    }
 
 
 }

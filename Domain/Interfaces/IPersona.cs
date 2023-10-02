@@ -20,6 +20,7 @@ public interface IPersona : IGenericRepo<Persona>
     Task<IEnumerable<object>> GetProveedoresMedicamentos();
     Task<IEnumerable<object>> GetTotalMedicamentosVendidosPorProveedor();
     Task<object> GetProveedorQueHaDadoMasMedicamentos();
+    Task<IEnumerable<object>> GetTotalMedicamentosPorProveedor();
 
 
 

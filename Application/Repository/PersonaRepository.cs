@@ -402,5 +402,17 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
         return proveedor;
     }
 
-
+    public async Task<IEnumerable<object>> GetTotalMedicamentosPorProveedor()
+    {   
+        var TotalMedicamentos = await (from m in _context.Medicamentos
+                                        join p in _context.Personas on m.ProveedorIdFk equals p.Id
+                                        group m by new { ProveedorId = p.Id, ProveedorNombre = p.Nombre } into g
+                                        select new 
+                                        {
+                                            ProveedorId = g.Key.ProveedorId,
+                                            ProveedorNombre = g.Key.ProveedorNombre,
+                                            CantidadMedicamentos = g.Count()
+                                        }).ToListAsync();
+        return TotalMedicamentos;
+    }
 }
