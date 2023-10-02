@@ -339,8 +339,7 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
                                     Nombre = p.Nombre,
                                     NumeroDocumento = p.NumeroDocumento,
                                     Direccion = p.Direccion
-                                }
-        ).ToListAsync();
+                                }).ToListAsync();
 
         return proveedores;
     }
@@ -381,4 +380,27 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
 
         return totalVendidos;
     }
+
+    public async Task<object> GetProveedorQueHaDadoMasMedicamentos()
+    {   
+        DateTime fechaInicio = new DateTime(2023, 1, 1);
+        DateTime fechaFin = new DateTime(2023, 12, 31);
+
+        var proveedor = await (from m in _context.Medicamentos
+                            join p in _context.Personas on m.ProveedorIdFk equals p.Id
+                            join c in _context.Compras on p.Id equals c.ProveedorIdFk
+                            where c.FechaCompra >= fechaInicio && c.FechaCompra <= fechaFin
+                            group m by new { ProveedorId = p.Id, ProveedorNombre = p.Nombre } into g
+                            orderby g.Sum(m => m.Stock) descending
+                            select new 
+                            {
+                                ProveedorId = g.Key.ProveedorId,
+                                ProveedorNombre = g.Key.ProveedorNombre,
+                                TotalMedicamentos = g.Sum(m => m.Stock)
+                            }).FirstOrDefaultAsync();
+
+        return proveedor;
+    }
+
+
 }
