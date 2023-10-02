@@ -142,45 +142,6 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
     }
 
 
- /*    public async Task<IEnumerable<object>> GetTotalGastadoPorPacienteEnAño(int año)
-    {
-        DateTime fechaInicio = new DateTime(año, 1, 1);
-        DateTime fechaFin = new DateTime(año, 12, 31);
-
-        var totalGastadoPorPaciente = await (from fv in _context.FacturasVentas
-                                            join p in _context.Personas on fv.PacienteIdFk equals p.Id
-                                            where fv.FechaFactura >= fechaInicio && fv.FechaFactura <= fechaFin
-                                            group new { fv, p } by new { p.Id, p.Nombre } into g
-                                            select new
-                                            {
-                                                PacienteIdFk = g.Key.Id,
-                                                Nombre = g.Key.Nombre,
-                                                TotalGastado = g.Sum(x => x.fv.PrecioTotal)
-                                            }).ToListAsync();
-
-        return totalGastadoPorPaciente;
-    } */
-
-/*     public async Task<IEnumerable<object>> GetTotalGastadoPorPacienteEnAño(int año)
-{
-    DateTime fechaInicio = new DateTime(año, 1, 1);
-    DateTime fechaFin = new DateTime(año, 12, 31);
-
-    var totalGastadoPorPaciente = await (from p in _context.Personas
-                                            join fv in _context.FacturasVentas on p.Id equals fv.PacienteIdFk into facturaVentasGroup
-                                            from fv in facturaVentasGroup.DefaultIfEmpty()
-                                            where p.TipoPersonaIdFk==3
-                                            where (fv == null || (fv.FechaFactura >= fechaInicio && fv.FechaFactura <= fechaFin))
-                                            group new { fv, p } by new { p.Id, p.Nombre } into g
-                                            select new
-                                            {
-                                                PacienteIdFk = g.Key.Id,
-                                                Nombre = g.Key.Nombre,
-                                                TotalGastado = g.Sum(x => x.fv != null ? x.fv.PrecioTotal : 0)
-                                            }).ToListAsync();
-
-    return totalGastadoPorPaciente;
-} */
 public async Task<IEnumerable<object>> GetTotalGastadoPorPacienteEnAño(int año)
 {
     DateTime fechaInicio = new DateTime(año, 1, 1);
