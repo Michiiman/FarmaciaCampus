@@ -104,4 +104,15 @@ public class MedicamentoVendidoController : BaseApiController
         }
         return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
     }
+    
+    [HttpGet("Consulta14")]
+    public async Task<ActionResult<IEnumerable<object>>> GetSalesPerMounth (int year, int month)
+    {
+        var entidad = await unitOfWork.MedicamentosVendidos.GetSalesPerMounth (year, month);
+        if (entidad == null)
+        {
+            return NotFound();
+        }
+        return Ok(this.mapper.Map<IEnumerable<object>>(entidad));
+    }
 }

@@ -75,6 +75,22 @@ public class MedicamentoVendidoRepository : GenericRepository<MedicamentoVendido
         return medicamentos;
     }
     //14. Obtener el total de medicamentos vendidos en marzo de 2023.
+    public async Task<IEnumerable<object>> GetSalesPerMounth (int year, int month)
+    {
+        var medicamentos = await (
+            from mv in _context.MedicamentoVendidos
+            join fv in _context.FacturasVentas on mv.FacturaVentaIdFk equals fv.Id
+            where (fv.FechaFactura.Year == year && fv.FechaFactura.Month == month)
+            group mv by mv.MedicamentoIdFk into grupo
+            select new
+            {
+                IdMedicamento = grupo.Key,
+                Ventas = grupo.Count()
+                
+            }
+        ).ToListAsync();
+        return medicamentos;
+    }
     //15. Obtener el medicamento menos vendido en 2023.
     //17. Promedio de medicamentos vendidos por venta.
     //26. Total de medicamentos vendidos por mes en 2023.
